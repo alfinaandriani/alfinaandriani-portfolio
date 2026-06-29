@@ -285,13 +285,80 @@
         transform: translateY(-2px);
         box-shadow: var(--shadow-md);
       }
+      .nav-toggle {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.7);
+        color: var(--ink);
+        box-shadow: var(--shadow-sm);
+        cursor: pointer;
+        padding: 0;
+      }
+      .nav-toggle__icon {
+        font-size: 20px;
+        line-height: 1;
+      }
+      .mobile-nav {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 16px;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(20px) saturate(160%);
+        -webkit-backdrop-filter: blur(20px) saturate(160%);
+        box-shadow: var(--shadow-md);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        pointer-events: none;
+        transition:
+          opacity 0.28s ease,
+          transform 0.28s ease,
+          visibility 0.28s ease;
+      }
+      .mobile-nav.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .mobile-nav-link {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 4px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--ink-soft);
+        transition: color 0.25s ease;
+      }
+      .mobile-nav-link:hover {
+        color: var(--ink);
+      }
 
-      @media (max-width: 760px) {
-        .nav-links {
+      @media (max-width: 767px) {
+        .nav-links,
+        .nav-cta {
           display: none;
         }
         nav {
+          position: relative;
           padding: 12px 18px;
+          border-radius: 24px;
+        }
+        .nav-toggle {
+          display: inline-flex;
         }
       }
 
@@ -1271,6 +1338,28 @@
           <a href="#certifications">Certification</a>
         </div>
         <a class="nav-cta" href="#contact">Contact</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span class="nav-toggle__icon" aria-hidden="true">☰</span>
+        </button>
+        <div
+          class="mobile-nav glass"
+          id="mobile-nav"
+          aria-label="Mobile navigation"
+        >
+          <a class="mobile-nav-link" href="#projects">Projects</a>
+          <a class="mobile-nav-link" href="#skills">Skill</a>
+          <a class="mobile-nav-link" href="#achievements">Achievement</a>
+          <a class="mobile-nav-link" href="#experience">Experience</a>
+          <a class="mobile-nav-link" href="#about">About</a>
+          <a class="mobile-nav-link" href="#certifications">Certification</a>
+          <a class="mobile-nav-link" href="#contact">Contact</a>
+        </div>
       </nav>
     </header>
 
@@ -2447,6 +2536,60 @@
               behavior: "smooth",
               block: "start",
             });
+          }
+        });
+      }
+
+      const mobileNav = document.querySelector(".mobile-nav");
+      const navToggle = document.querySelector(".nav-toggle");
+      const navToggleIcon = document.querySelector(".nav-toggle__icon");
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+      function closeMobileNav() {
+        if (!mobileNav || !navToggle) return;
+        mobileNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Open navigation");
+        if (navToggleIcon) {
+          navToggleIcon.textContent = "☰";
+        }
+        document.body.style.overflow = "";
+      }
+
+      function openMobileNav() {
+        if (!mobileNav || !navToggle) return;
+        mobileNav.classList.add("is-open");
+        navToggle.setAttribute("aria-expanded", "true");
+        navToggle.setAttribute("aria-label", "Close navigation");
+        if (navToggleIcon) {
+          navToggleIcon.textContent = "✕";
+        }
+        document.body.style.overflow = "hidden";
+      }
+
+      if (mobileNav && navToggle) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = mobileNav.classList.contains("is-open");
+          if (isOpen) {
+            closeMobileNav();
+          } else {
+            openMobileNav();
+          }
+        });
+
+        mobileNavLinks.forEach((link) => {
+          link.addEventListener("click", closeMobileNav);
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 767) {
+            closeMobileNav();
+          }
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeMobileNav();
           }
         });
       }
