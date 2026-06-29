@@ -124,7 +124,7 @@
       }
       section {
         position: relative;
-        padding: 140px 0;
+        padding: 60px 0;
       }
       section + section {
         border-top: none;
@@ -563,6 +563,65 @@
       .project-card.hidden {
         display: none;
       }
+      .project-card.project-card--featured {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        align-items: stretch;
+      }
+      .project-card.project-card--featured .project-cover {
+        flex: 0 0 45%;
+        height: auto;
+        min-height: 220px;
+        margin-bottom: 0;
+      }
+      .project-card.project-card--featured .pc-body {
+        flex: 0 0 55%;
+        padding: 26px 30px 24px;
+      }
+      .project-card.project-card--featured h3 {
+        font-size: 28px;
+      }
+      .project-card.project-card--featured .desc {
+        font-size: 14px;
+      }
+      .projects-toggle-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 56px;
+        margin-bottom: 20px;
+      }
+      .projects-toggle {
+        border: 1px solid var(--line);
+        background: rgba(21, 20, 15, 0.04);
+        color: var(--ink);
+        padding: 13px 24px;
+        border-radius: 100px;
+        font-size: 13.5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          background 0.3s ease,
+          transform 0.3s ease,
+          color 0.3s ease;
+      }
+      .projects-toggle:hover {
+        background: var(--ink);
+        color: #fff;
+        transform: translateY(-2px);
+      }
+      .project-card.project-card--reveal {
+        animation: project-card-fade-up 0.35s ease both;
+      }
+      @keyframes project-card-fade-up {
+        from {
+          opacity: 0;
+          transform: translateY(18px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
       .project-cover {
         position: relative;
         height: 300px;
@@ -627,6 +686,7 @@
         display: flex;
         flex-direction: column;
         flex: 1;
+        height: 100%;
       }
       .project-card h3 {
         font-family: var(--editorial);
@@ -640,12 +700,19 @@
         color: var(--ink-soft);
         line-height: 1.65;
         margin-bottom: 18px;
+        flex: 1 1 auto;
       }
       .tag-row {
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
-        margin-bottom: 22px;
+        margin-bottom: 20px;
+      }
+      .project-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: auto;
       }
       .tag {
         font-size: 11.5px;
@@ -656,8 +723,8 @@
         color: var(--ink-soft);
         border: 1px solid var(--line-soft);
       }
-      .see-more {
-        margin-top: auto;
+      .project-actions .see-more {
+        margin-top: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -672,6 +739,11 @@
           background 0.3s,
           transform 0.3s;
       }
+      .project-actions .see-more:hover {
+        background: var(--ink);
+        color: #fff;
+        transform: translateY(-2px);
+      }
       .see-more:hover {
         background: var(--ink);
         color: #fff;
@@ -681,6 +753,17 @@
       @media (max-width: 860px) {
         .project-grid {
           grid-template-columns: 1fr;
+        }
+        .project-card.project-card--featured {
+          flex-direction: column;
+        }
+        .project-card.project-card--featured .project-cover {
+          flex: 0 0 auto;
+          min-height: 260px;
+        }
+        .project-card.project-card--featured .pc-body {
+          flex: 1 1 auto;
+          padding: 20px 8px 4px;
         }
       }
 
@@ -1255,7 +1338,10 @@
           <div class="project-grid">
             <!-- repeated project card x6 -->
 
-            <article class="project-card glass reveal" data-cat="business">
+            <article
+              class="project-card project-card--featured glass reveal"
+              data-cat="business"
+            >
               <div class="project-cover">
                 <img src="images/cover-maroku.png" alt="Maroku cover" />
               </div>
@@ -1406,7 +1492,7 @@
                 <div class="tag-row">
                   <span class="tag">User Scenario</span>
                   <span class="tag">Flowchart</span>
-                  <span class="tag">Wireframing</span> 
+                  <span class="tag">Wireframing</span>
                   <span class="tag">Prototyping</span>
                 </div>
                 <a
@@ -1467,7 +1553,7 @@
               </div>
             </article>
 
-            <article class="project-card glass reveal" data-cat="business">
+            <!-- <article class="project-card glass reveal" data-cat="business">
               <div class="project-cover">
                 <img src="images/cover-qbit.png" alt="QBit cover" />
               </div>
@@ -1492,7 +1578,7 @@
                   >Prototype →</a
                 >
               </div>
-            </article>
+            </article> -->
 
             <article class="project-card glass reveal" data-cat="digital">
               <div class="project-cover">
@@ -1743,6 +1829,12 @@
                 >
               </div>
             </article>
+          </div>
+
+          <div class="projects-toggle-wrap">
+            <button class="projects-toggle" type="button" data-expanded="false">
+              View More
+            </button>
           </div>
         </div>
       </section>
@@ -2031,40 +2123,10 @@
             <div class="tl-row right">
               <div class="tl-node"></div>
               <div class="tl-card glass reveal">
-                <span class="tl-date">Jul 2023 – Nov 2023</span>
-                <div class="tl-card-top">
-                  <h3>Freelance Graphic Designer</h3>
-                  <!-- <span class="tl-badge">Internship</span> -->
-                </div>
-                <div class="tl-card-sub">
-                  <span class="tl-company">Sigma X Pro</span>
-                </div>
-                <p class="desc">
-                  Designed Instagram visual content aligned with brand identity,
-                  developed content planning, maintained feed consistency, and
-                  created designs supporting branding and marketing
-                  communication.
-                </p>
-                <!-- <ul class="bullets">
-                  <li>List kerjaan/yang dilakukan</li>
-                  <li>List kerjaan/yang dilakukan</li>
-                  <li>List kerjaan/yang dilakukan</li>
-                </ul> -->
-                <div class="tl-tools">
-                  <span class="tag">Social Media Design</span
-                  ><span class="tag">Content Planning</span
-                  ><span class="tag">Figma</span
-                  ><span class="tag">Visual Design</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="tl-row left">
-              <div class="tl-card glass reveal">
                 <span class="tl-date">Mar 2023 – Sep 2023</span>
                 <div class="tl-card-top">
                   <h3>Creative Graphic Designer</h3>
-                  <!-- <span class="tl-badge">Freelance</span> -->
+                  <!-- <span class="tl-badge">Internship</span> -->
                 </div>
                 <div class="tl-card-sub">
                   <span class="tl-company">Skill Up</span>
@@ -2086,16 +2148,14 @@
                   ><span class="tag">Design Consistency</span>
                 </div>
               </div>
-              <div class="tl-node"></div>
             </div>
 
-            <div class="tl-row right">
-              <div class="tl-node"></div>
+            <div class="tl-row left">
               <div class="tl-card glass reveal">
                 <span class="tl-date">May 2023 – Sep 2023</span>
                 <div class="tl-card-top">
                   <h3>Brand Creative Designer</h3>
-                  <!-- <span class="tl-badge">Part-Time</span> -->
+                  <!-- <span class="tl-badge">Freelance</span> -->
                 </div>
                 <div class="tl-card-sub">
                   <span class="tl-company">Teman Bercerita Indonesia</span>
@@ -2118,6 +2178,7 @@
                   ><span class="tag">Brand Identity</span>
                 </div>
               </div>
+              <div class="tl-node"></div>
             </div>
           </div>
         </div>
@@ -2143,13 +2204,27 @@
                 overclaim]
               </p> -->
               <p class="desc">
-                Fresh graduate in Information Systems with a focus on UI/UX
-                design and business analysis. Through academic and project-based
-                experience, I have worked on digital projects involving user
-                research, interface design, business-oriented analysis, and
-                dashboard development. I enjoy turning user needs, business
-                challenges, and data insights into structured digital solutions
-                that are functional, purposeful, and grounded in real problems.
+                I am an Information Systems graduate with a growing focus on
+                UI/UX design, business analysis, and digital product
+                problem-solving. I am interested in work that connects user
+                needs, business goals, and digital experiences, with an emphasis
+                on understanding problems before translating them into
+                structured and meaningful solutions. My undergraduate thesis
+                gave me hands-on experience in an end-to-end UI/UX design
+                process using Design Thinking. Working with business
+                stakeholders and customers helped me understand how research,
+                problem analysis, and user insights can shape design decisions
+                that are not only intuitive for users but also relevant to
+                business needs. Beyond my thesis, participating in national
+                UI/UX competitions strengthened my ability to collaborate, adapt
+                to different project contexts, and approach design challenges
+                from multiple perspectives. These experiences also encouraged me
+                to continuously refine my process, communicate ideas more
+                clearly, and improve solutions through feedback and iteration. I
+                am currently seeking opportunities in UI/UX Design, Business
+                Analysis, and digital product-related roles where I can
+                contribute, continue learning, and grow through real product and
+                user challenges.
               </p>
             </div>
 
@@ -2320,6 +2395,61 @@
           });
         });
       });
+
+      const projectCards = Array.from(
+        document.querySelectorAll(".project-card"),
+      );
+      document.querySelectorAll(".project-card .pc-body").forEach((body) => {
+        const actionLinks = Array.from(
+          body.querySelectorAll(":scope > .see-more"),
+        );
+        if (!actionLinks.length) return;
+
+        const actions = document.createElement("div");
+        actions.className = "project-actions";
+        actionLinks.forEach((link) => actions.appendChild(link));
+        body.appendChild(actions);
+      });
+      const hiddenCards = projectCards.slice(3);
+      const projectsToggle = document.querySelector(".projects-toggle");
+      const projectsSection = document.getElementById("projects");
+
+      projectCards
+        .slice(0, 3)
+        .forEach((card) => card.classList.remove("hidden"));
+      hiddenCards.forEach((card) => card.classList.add("hidden"));
+
+      if (projectsToggle) {
+        projectsToggle.addEventListener("click", () => {
+          const expanded = projectsToggle.dataset.expanded === "true";
+
+          if (!expanded) {
+            hiddenCards.forEach((card, index) => {
+              card.classList.remove("hidden");
+              requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                  card.classList.add("project-card--reveal");
+                });
+              });
+              card.style.setProperty("animation-delay", `${index * 40}ms`);
+            });
+            projectsToggle.dataset.expanded = "true";
+            projectsToggle.textContent = "View Less";
+          } else {
+            hiddenCards.forEach((card) => {
+              card.classList.remove("project-card--reveal");
+              card.classList.add("hidden");
+              card.style.removeProperty("animation-delay");
+            });
+            projectsToggle.dataset.expanded = "false";
+            projectsToggle.textContent = "View More";
+            projectsSection.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      }
 
       // scroll reveal
       const revealEls = document.querySelectorAll(".reveal");
