@@ -1,6 +1,3 @@
-const LOREM =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-
 const CATEGORIES = {
   uiux: { label: "UI/UX Design", sidebarLabel: "UI/UX Design" },
   dataml: { label: "Data & ML", sidebarLabel: "Data & ML" },
