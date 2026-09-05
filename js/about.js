@@ -484,6 +484,19 @@ function renderAboutPage() {
   `,
   ).join("");
 
+  document.getElementById("experience-list").innerHTML = EXPERIENCE.map(
+    (e) => `
+    <div class="timeline-item">
+      <p class="timeline-item__date">${e.date}</p>
+      <div class="timeline-item__detail">
+        <p class="timeline-item__title">${e.title}</p>
+        <p class="timeline-item__org">${e.role}</p>
+        <p class="timeline-item__desc">${e.desc}</p>
+      </div>
+    </div>
+  `,
+  ).join("");
+
   document.getElementById("achievement-list").innerHTML = ACHIEVEMENTS.map(
     (a) => `
     <div class="timeline-item">
@@ -507,19 +520,6 @@ function renderAboutPage() {
         <p class="timeline-item__org">${e.role}</p>
         ${e.sub ? `<p class="timeline-item__sub">${e.sub}</p>` : ""}
         ${e.desc ? `<p class="timeline-item__desc">${e.desc}</p>` : ""}
-      </div>
-    </div>
-  `,
-  ).join("");
-
-  document.getElementById("experience-list").innerHTML = EXPERIENCE.map(
-    (e) => `
-    <div class="timeline-item">
-      <p class="timeline-item__date">${e.date}</p>
-      <div class="timeline-item__detail">
-        <p class="timeline-item__title">${e.title}</p>
-        <p class="timeline-item__org">${e.role}</p>
-        <p class="timeline-item__desc">${e.desc}</p>
       </div>
     </div>
   `,
