@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Sidebar — used on project-list pages and project-detail pages
+   Sticky while scrolling, stops before the footer.
+   ========================================================================== */
+
+.layout-with-sidebar {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gutter);
+  align-items: start;
+}
+
+.page-sidebar {
+  grid-column: 1 / 3;
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+
+.page-sidebar__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  color: var(--project-color, var(--color-dark));
+  transition: gap var(--transition-fast);
+}
+
+.page-sidebar__back:hover {
+  gap: 12px;
+}
+
+.page-sidebar__title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: var(--project-color, var(--color-dark));
+}
+
+.page-sidebar__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.page-sidebar__link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  /* opacity: 0.5; */
+  transition: opacity var(--transition-fast);
+  text-align: left;
+}
+
+.page-sidebar__link:hover {
+  color: var(--color-dark);
+}
+
+.page-sidebar__link.is-active {
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+#detail-layout .page-sidebar__link {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--project-color, var(--color-text-faint));
+  opacity: 0.5;
+  transition:
+    opacity var(--transition-fast),
+    color var(--transition-fast);
+  text-align: left;
+}
+#detail-layout .page-sidebar__link:hover,
+#detail-layout .page-sidebar__link.is-active {
+  color: var(--project-color);
+  opacity: 1;
+  font-weight: 700;
+}
+
+.page-sidebar--contact {
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--project-color, var(--color-border));
+  font-size: 14px;
+  color: var(--project-color, var(--color-text-muted));
+}
+
+.page-sidebar--contact a,
+.page-sidebar--contact p {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.page-content {
+  grid-column: 3 / 13;
+}
+
+#detail-layout .page-sidebar__link:hover,
+#detail-layout .page-sidebar__link.is-active {
+  color: var(--project-color, var(--color-dark));
+}

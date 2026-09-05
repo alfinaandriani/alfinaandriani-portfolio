@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Header / Navbar
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition-fast);
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--color-border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  height: 80px;
+}
+
+.site-header__logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.site-header__logo img {
+  max-height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.site-header__link {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--color-dark);
+  position: relative;
+  padding: 4px 0;
+}
+
+.site-header__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  height: 1px;
+  background: var(--color-dark);
+  transition: right var(--transition-medium);
+}
+
+.site-header__link:hover::after,
+.site-header__link.is-active::after {
+  right: 0;
+}
+
+.site-header__link.is-active {
+  font-weight: 600;
+}
+
+/* Projects dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown__trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  color: var(--color-dark);
+}
+
+.nav-dropdown__trigger svg {
+  transition: transform var(--transition-fast);
+}
+
+.nav-dropdown.is-open .nav-dropdown__trigger svg {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown__menu {
+  position: absolute;
+  top: calc(100% + 16px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 10px;
+  min-width: 220px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast),
+    visibility var(--transition-fast);
+}
+
+.nav-dropdown.is-open .nav-dropdown__menu,
+.nav-dropdown:hover .nav-dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown.is-open .nav-dropdown__trigger svg,
+.nav-dropdown:hover .nav-dropdown__trigger svg {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown__item {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  color: var(--color-dark);
+  transition: background var(--transition-fast);
+}
+
+.nav-dropdown__item:hover {
+  background: var(--color-chip-bg);
+}
+
+/* Mobile */
+.site-header__burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 20px;
+  height: 32px;
+}
+
+.site-header__burger span {
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  background: var(--color-dark);
+  transition:
+    transform var(--transition-medium),
+    opacity var(--transition-medium);
+}
+
+.site-header__burger.is-open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+.site-header__burger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.site-header__burger.is-open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  z-index: 99;
+  padding: 80px var(--grid-margin) 40px;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  transform: translateY(-100%);
+  transition: transform var(--transition-medium);
+}
+
+.mobile-nav.is-open {
+  transform: translateY(0);
+}
+
+.mobile-nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-nav__link {
+  font-size: clamp(16px, 3.5vw, 22px);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 12px 0;
+}
+
+.mobile-nav__sublist {
+  display: flex;
+  flex-direction: column;
+  padding-left: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-medium);
+}
+
+.mobile-nav__sub.is-open .mobile-nav__sublist {
+  max-height: 600px;
+}
+
+.mobile-nav__sub.is-open .mobile-nav__link svg {
+  transform: rotate(180deg);
+}
+
+.mobile-nav__sublink {
+  font-size: clamp(14px, 3vw, 16px);
+  color: var(--color-text-muted);
+  padding: 10px 0;
+}

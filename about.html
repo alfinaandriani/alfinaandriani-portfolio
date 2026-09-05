@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Alfina Andriani</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/sidebar.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header" id="site-header"></header>
+
+    <main class="container">
+      <div class="layout-with-sidebar">
+        <aside class="page-sidebar" id="about-sidebar">
+          <p class="page-sidebar__title">About</p>
+          <nav class="page-sidebar__list">
+            <a class="page-sidebar__link" href="#skills">Skills</a>
+            <a class="page-sidebar__link" href="#experience">Experience</a>
+            <a class="page-sidebar__link" href="#achievement">Achievement</a>
+            <a class="page-sidebar__link" href="#education">Education</a>
+            <a class="page-sidebar__link" href="#certification"
+              >Certification</a
+            >
+            <a class="page-sidebar__link" href="#campus-activities">Campus Activities</a>
+            <a class="page-sidebar__link" href="#contact">Contact</a>
+          </nav>
+        </aside>
+
+        <div class="page-content">
+          <div class="about-hero">
+            <div>
+              <h1 class="section-title">
+                ALFINA ANDRIANI
+              </h1>
+              <p class="about-hero__tagline">
+                Business • Design • Digital Products
+              </p>
+              <p class="about-hero__desc">
+                Information Systems graduate passionate about understanding
+                business needs, analyzing problems, and designing meaningful
+                digital products.
+              </p>
+              <div class="about-social">
+                <a href="mailto:alfinaandr04@gmail.com" aria-label="Email">✉</a>
+                <a
+                  href="https://linkedin.com/in/alfinaandriani04"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noopener"
+                  >in</a
+                >
+                <a
+                  href="https://instagram.com/alfinaandriani_/"
+                  aria-label="Instagram"
+                  target="_blank"
+                  rel="noopener"
+                  >◎</a
+                >
+                <a
+                  href="https://github.com/alfinaandriani/"
+                  aria-label="GitHub"
+                  target="_blank"
+                  rel="noopener"
+                  >gh</a
+                >
+                <a
+                  href="https://behance.net/alfinaandriani04"
+                  aria-label="Behance"
+                  target="_blank"
+                  rel="noopener"
+                  >Bé</a
+                >
+              </div>
+            </div>
+            <div class="about-hero__photo">
+              <img src="images/profile.png" alt="Portrait of Alfina Andriani" />
+            </div>
+          </div>
+
+          <!-- SKILLS -->
+          <section id="skills" class="section--tight">
+            <h2 class="section-title" style="margin-bottom: 32px">SKILLS</h2>
+            <div id="skills-accordion"></div>
+          </section>
+
+          <!-- EXPERIENCE -->
+          <section id="experience" class="section--tight">
+            <h2 class="section-title" style="margin-bottom: 32px">
+              EXPERIENCE
+            </h2>
+            <div id="experience-list"></div>
+          </section>
+
+          <!-- ACHIEVEMENT -->
+          <section id="achievement" class="section--tight">
+            <h2 class="section-title" style="margin-bottom: 32px">
+              ACHIEVEMENT
+            </h2>
+            <div id="achievement-list"></div>
+          </section>
+
+          <!-- EDUCATION -->
+          <section id="education" class="section--tight">
+            <h2 class="section-title" style="margin-bottom: 32px">EDUCATION</h2>
+            <div id="education-list"></div>
+          </section>
+
+          <!-- CERTIFICATION -->
+          <section id="certification" class="section--tight">
+            <h2 class="section-title" style="margin-bottom: 32px">
+              CERTIFICATION
+            </h2>
+            <div id="certification-list"></div>
+          </section>
+
+          <!-- CAMPUS ACTIVITIES -->
+          <section id="campus-activities" class="section--tight">
+            <h2 class="section-title" style="margin-bottom: 32px">
+              CAMPUS ACTIVITIES
+            </h2>
+            <div id="campus-activities-list"></div>
+          </section>
+
+          <div id="contact" style="height: 1px"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/about.js"></script>
+    <script>
+      renderHeader("about");
+      renderFooter();
+      initNav();
+      renderAboutPage();
+    </script>
+  </body>
+</html>

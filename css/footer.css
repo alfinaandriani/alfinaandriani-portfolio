@@ -1,0 +1,235 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  background: var(--color-dark);
+  color: var(--color-white);
+  padding-top: 96px;
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--grid-gutter);
+  padding-bottom: 64px;
+}
+
+.site-footer__brand {
+  grid-column: span 4;
+}
+
+.site-footer__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 28px;
+  height: 36px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.site-footer__logo img {
+  max-height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.site-footer__logo-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #fff;
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.site-footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.site-footer__contact a,
+.site-footer__contact p {
+  font-size: 15px;
+  color: #e4e4e4;
+  margin-bottom: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.site-footer__contact a:hover {
+  text-decoration: underline;
+}
+
+.site-footer__col {
+  grid-column: span 2;
+}
+
+.site-footer__col:last-child {
+  grid-column: span 2;
+}
+
+.site-footer__col-title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-footer-text-muted);
+  margin-bottom: 22px;
+}
+
+.site-footer__col a,
+.site-footer__col span {
+  display: block;
+  font-size: 15px;
+  color: #e4e4e4;
+  margin-bottom: 14px;
+  transition: color var(--transition-fast);
+}
+
+.site-footer__col a:hover {
+  color: #fff;
+}
+
+.site-footer__social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-footer__social > a {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.site-footer__social > a svg {
+  width: 18px;
+  height: 100%;
+  display: block;
+}
+
+.site-footer__social > a:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(-2px);
+}
+
+.site-footer__bottom {
+  border-top: 1px solid #262626;
+  padding: 28px 0;
+  text-align: center;
+}
+
+.site-footer__bottom p {
+  font-size: 13px;
+  color: var(--color-footer-text-muted);
+}
+
+.site-footer__email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-footer__email > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.email-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #e4e4e4;
+  cursor: pointer;
+  margin-left: -8px;
+}
+
+.email-copy-btn svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.email-copy-btn:hover {
+  color: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+}
+
+.email-copy-btn.copied {
+  color: rgba(255, 255, 255, 1);
+}
+
+.copy-notification {
+  position: fixed;
+  left: 80px;
+  bottom: 80px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 16px;
+
+  background: #262434;
+  color: rgba(255, 255, 255, 0.9);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  pointer-events: none;
+  z-index: 9999;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.copy-notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.copy-notification svg {
+  flex-shrink: 0;
+}
