@@ -1,6 +1,3 @@
-const LOREM =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
-
 const CATEGORIES = {
   uiux: { label: "UI/UX Design", sidebarLabel: "UI/UX Design" },
   dataml: { label: "Data & ML", sidebarLabel: "Data & ML" },
@@ -38,7 +35,7 @@ const PROJECTS = [
       { label: "Tools", value: "Figma, Maze, Draw.io" },
     ],
     detailIntro:
-      "Designed a mobile experience for Maroku using a Design Thinking approach, translating user research and usability testing into structured ordering, custom cake, class registration, and store management flows.",
+      "Designed a mobile application for Maroku using a Design Thinking approach, translating user research and usability testing into structured ordering, custom cake, class registration, and store management flows.",
     template: "maroku-uiux",
     links: [
       {
@@ -548,6 +545,7 @@ const PROJECTS = [
       { label: "Type", value: "Mobile App" },
       { label: "Role", value: "UI/UX Designer" },
       { label: "Year", value: "2024" },
+      { label: "Tools", value: "Figma, FigJam, Maze" },
     ],
     detailIntro:
       "Designed a mobile application concept that combines traditional East Java culinary recipes, cultural information, interactive cooking guidance, and supporting features into a more accessible digital experience.",
@@ -1249,29 +1247,29 @@ const PROJECTS = [
         `,
 
         items: [
-          {
-            label: "User Persona",
-            body: `
-              <p>
-                Three user personas were developed to represent the main target users of SIPILU: teenagers, adults, and older adults. The personas help represent different user perspectives and provide a reference for designing an election experience that addresses their information, efficiency, and security needs.
-              </p>
+          // {
+          //   label: "User Persona",
+          //   body: `
+          //     <p>
+          //       Three user personas were developed to represent the main target users of SIPILU: teenagers, adults, and older adults. The personas help represent different user perspectives and provide a reference for designing an election experience that addresses their information, efficiency, and security needs.
+          //     </p>
 
-              <img src="images/projects/sipilu/user-persona-remaja.png" alt="User Persona: Teenager">
-              <p>
-                The teenager persona represents a young voter who needs easier access to information about elections and candidates before making a voting decision.
-              </p>
+          //     <img src="images/projects/sipilu/user-persona-remaja.png" alt="User Persona: Teenager">
+          //     <p>
+          //       The teenager persona represents a young voter who needs easier access to information about elections and candidates before making a voting decision.
+          //     </p>
 
-              <img src="images/projects/sipilu/user-persona-orang-dewasa.png" alt="User Persona: Adult">
-              <p>
-                The adult persona represents a user who wants to participate in elections while minimizing the time required to complete the voting process.
-              </p>
+          //     <img src="images/projects/sipilu/user-persona-orang-dewasa.png" alt="User Persona: Adult">
+          //     <p>
+          //       The adult persona represents a user who wants to participate in elections while minimizing the time required to complete the voting process.
+          //     </p>
 
-              <img src="images/projects/sipilu/user-persona-orang-tua.png" alt="User Persona: Older Adult">
-              <p>
-                The older adult persona represents a voter who benefits from accessible election information and a voting experience with clear security and authentication steps.
-              </p>
-            `,
-          },
+          //     <img src="images/projects/sipilu/user-persona-orang-tua.png" alt="User Persona: Older Adult">
+          //     <p>
+          //       The older adult persona represents a voter who benefits from accessible election information and a voting experience with clear security and authentication steps.
+          //     </p>
+          //   `,
+          // },
 
           {
             label: "Point of View",
@@ -1433,27 +1431,29 @@ const PROJECTS = [
             media: {
               layout: "grid",
               columns: 1,
-              items: ["images/projects/sipilu/information-architecture.png"],
+              items: [
+                "images/projects/sipilu/information-architecture.png"
+              ],
             },
           },
 
-          {
-            label: "User Flow",
-            body: `
-              <p>
-                The application flow describes the sequence of interactions from authentication through voting and accessing election results. The process begins with the Splash Screen and authentication, followed by access to the Home page and the main functions available through the bottom tab bar.
-              </p>
+          // {
+          //   label: "User Flow",
+          //   body: `
+          //     <p>
+          //       The application flow describes the sequence of interactions from authentication through voting and accessing election results. The process begins with the Splash Screen and authentication, followed by access to the Home page and the main functions available through the bottom tab bar.
+          //     </p>
 
-              <p>
-                The main navigation consists of four areas: <strong>Home</strong>, <strong>e-Voting</strong>, <strong>Results</strong>, and <strong>Profile</strong>. The e-Voting flow includes selecting the election level, selecting a candidate pair, reviewing candidate information, entering the security code, confirming the selection, and accessing the vote result.
-              </p>
-            `,
-            media: {
-              layout: "grid",
-              columns: 1,
-              items: ["images/projects/sipilu/user-flow.png"],
-            },
-          },
+          //     <p>
+          //       The main navigation consists of four areas: <strong>Home</strong>, <strong>e-Voting</strong>, <strong>Results</strong>, and <strong>Profile</strong>. The e-Voting flow includes selecting the election level, selecting a candidate pair, reviewing candidate information, entering the security code, confirming the selection, and accessing the vote result.
+          //     </p>
+          //   `,
+          //   media: {
+          //     layout: "grid",
+          //     columns: 1,
+          //     items: ["images/projects/sipilu/user-flow.png"],
+          //   },
+          // },
 
           {
             label: "Wireframe",
@@ -1469,7 +1469,12 @@ const PROJECTS = [
             media: {
               layout: "grid",
               columns: 1,
-              items: ["images/projects/sipilu/wireframe.png"],
+              items: [
+                "images/projects/sipilu/wireframe-1.png",
+                "images/projects/sipilu/wireframe-2.png",
+                "images/projects/sipilu/wireframe-3.png",
+                "images/projects/sipilu/wireframe-4.png",
+              ],
             },
           },
         ],
@@ -1494,11 +1499,7 @@ const PROJECTS = [
             label: "Style Guide",
             body: `
               <p>
-                The SIPILU Style Guide establishes the visual foundation for the application's interface. The design uses a gradient combination of <strong>maroon (#771011)</strong> and <strong>red (#D84339)</strong>, with <strong>cream (#E8DCCC)</strong> as a supporting color.
-              </p>
-
-              <p>
-                The color selection uses red and maroon to reflect an Indonesian national identity, while cream provides visual balance. The interface uses <strong>Montserrat</strong> as its main typeface to create a modern and less rigid visual character. The prototype canvas size is <strong>430 × 932 pixels</strong>.
+                The SIPILU Style Guide establishes the visual foundation for the application's interface.
               </p>
             `,
             media: {
@@ -1523,17 +1524,10 @@ const PROJECTS = [
               layout: "grid",
               columns: 1,
               items: [
-                "images/projects/sipilu/mockup-splash.png",
-                "images/projects/sipilu/mockup-authentication.png",
-                "images/projects/sipilu/mockup-home.png",
-                "images/projects/sipilu/mockup-article.png",
-                "images/projects/sipilu/mockup-voting.png",
-                "images/projects/sipilu/mockup-candidate.png",
-                "images/projects/sipilu/mockup-security-code.png",
-                "images/projects/sipilu/mockup-confirmation.png",
-                "images/projects/sipilu/mockup-success.png",
-                "images/projects/sipilu/mockup-results.png",
-                "images/projects/sipilu/mockup-profile.png",
+                "images/projects/sipilu/mockup-1.png",
+                "images/projects/sipilu/mockup-2.png",
+                "images/projects/sipilu/mockup-3.png",
+                "images/projects/sipilu/mockup-4.png",
               ],
             },
             cta: "EXPLORE LIVE FIGMA",
@@ -4569,10 +4563,7 @@ const PROJECTS = [
         kind: "table",
         columns: ["Role", "Access & Function"],
         rows: [
-          [
-            "Anggota",
-            "Input cash payments and submit agenda fund proposals.",
-          ],
+          ["Anggota", "Input cash payments and submit agenda fund proposals."],
           [
             "Bendahara",
             "Access cash master data, agenda fund proposal master data, cash reports, and agenda fund proposal reports.",
@@ -4590,10 +4581,7 @@ const PROJECTS = [
         kind: "table",
         columns: ["Feature", "Description"],
         rows: [
-          [
-            "Authentication",
-            "Provides login access for different user roles.",
-          ],
+          ["Authentication", "Provides login access for different user roles."],
           [
             "Cash Payment",
             "Allows members to input their organizational cash payments.",
@@ -6003,7 +5991,7 @@ const PROJECTS = [
     bg: "#FEEFF3",
     color: "#F03167",
     image: null,
-    desc: LOREM,
+    desc: "",
     meta: [
       { label: "Role", value: "Graphic Designer" },
       { label: "Year", value: "2023" },
@@ -6018,7 +6006,7 @@ const PROJECTS = [
     bg: "#FEEFF3",
     color: "#F03167",
     image: null,
-    desc: LOREM,
+    desc: "",
     meta: [
       { label: "Role", value: "Graphic Designer" },
       { label: "Year", value: "2023" },
@@ -6033,7 +6021,7 @@ const PROJECTS = [
     bg: "#FEEFF3",
     color: "#F03167",
     image: null,
-    desc: LOREM,
+    desc: "",
     meta: [
       { label: "Role", value: "Graphic Designer" },
       { label: "Year", value: "2023" },
@@ -6048,7 +6036,7 @@ const PROJECTS = [
     bg: "#FEEFF3",
     color: "#F03167",
     image: null,
-    desc: LOREM,
+    desc: "",
     meta: [
       { label: "Role", value: "Creative Graphic Designer" },
       { label: "Year", value: "2023" },
@@ -6063,7 +6051,7 @@ const PROJECTS = [
     bg: "#FEEFF3",
     color: "#F03167",
     image: null,
-    desc: LOREM,
+    desc: "",
     meta: [
       { label: "Role", value: "Graphic Designer" },
       { label: "Year", value: "2023" },
@@ -6078,7 +6066,7 @@ const PROJECTS = [
     bg: "#FEEFF3",
     color: "#F03167",
     image: null,
-    desc: LOREM,
+    desc: "",
     meta: [
       { label: "Role", value: "Graphic Designer" },
       { label: "Year", value: "2023" },
@@ -6093,7 +6081,7 @@ const PROJECTS = [
     bg: "#FEEFF3",
     color: "#F03167",
     image: null,
-    desc: LOREM,
+    desc: "",
     meta: [
       { label: "Role", value: "Publication & Documentation" },
       { label: "Year", value: "2022-2023" },
