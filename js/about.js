@@ -106,33 +106,6 @@ const SKILLS = [
   // },
 ];
 
-const EXPERIENCE = [
-  {
-    date: "Aug 2023 — Apr 2024",
-    title: "Creative Marketing",
-    role: "Fazt Creative (now Bloomative)",
-    desc: "Managed digital marketing and social media activities for four clients, covering content planning, visual design, organic content strategy, Meta Ads, and campaign performance reporting.",
-  },
-  {
-    date: "Mar 2023 — Sep 2023",
-    title: "Creative Graphic Designer",
-    role: "Skill Up Foundation (now Satu Edu Foundation)",
-    desc: "Created visual assets and branding materials using Figma while collaborating with the team on concept development, design refinement, and maintaining brand consistency.",
-  },
-  {
-    date: "Jul 2023 — Nov 2023",
-    title: "Freelance Graphic Designer",
-    role: "Sigma X Pro",
-    desc: "Developed content plans, visual concepts, and Instagram content aligned with brand identity, while supporting social media copywriting and Reels content planning.",
-  },
-  {
-    date: "May 2023 — Sep 2023",
-    title: "Brand Creative Designer",
-    role: "Teman Bercerita Indonesia",
-    desc: "Designed graphic materials and illustrations based on project briefs while collaborating on concept development, revisions, and visual identity consistency.",
-  },
-];
-
 const ACHIEVEMENTS = [
   {
     date: "2024",
@@ -240,6 +213,33 @@ const EDUCATION = [
     role: "Multimedia",
     sub: "",
     desc: "",
+  },
+];
+
+const EXPERIENCE = [
+  {
+    date: "Aug 2023 — Apr 2024",
+    title: "Creative Marketing",
+    role: "Fazt Creative (now Bloomative)",
+    desc: "Managed digital marketing and social media activities for four clients, covering content planning, visual design, organic content strategy, Meta Ads, and campaign performance reporting.",
+  },
+  {
+    date: "Mar 2023 — Sep 2023",
+    title: "Creative Graphic Designer",
+    role: "Skill Up Foundation (now Satu Edu Foundation)",
+    desc: "Created visual assets and branding materials using Figma while collaborating with the team on concept development, design refinement, and maintaining brand consistency.",
+  },
+  {
+    date: "Jul 2023 — Nov 2023",
+    title: "Freelance Graphic Designer",
+    role: "Sigma X Pro",
+    desc: "Developed content plans, visual concepts, and Instagram content aligned with brand identity, while supporting social media copywriting and Reels content planning.",
+  },
+  {
+    date: "May 2023 — Sep 2023",
+    title: "Brand Creative Designer",
+    role: "Teman Bercerita Indonesia",
+    desc: "Designed graphic materials and illustrations based on project briefs while collaborating on concept development, revisions, and visual identity consistency.",
   },
 ];
 
