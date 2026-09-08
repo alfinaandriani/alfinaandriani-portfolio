@@ -1653,27 +1653,27 @@ const PROJECTS = [
             `,
           },
 
-          {
-            label: "Target Users",
-            body: `
-              <p>
-                BeCare is designed for users who regularly use wearable devices to monitor their physical activity and health, as well as users who are health-aware and seek more understandable health analysis and personalized recommendations.
-              </p>
+          // {
+          //   label: "Target Users",
+          //   body: `
+          //     <p>
+          //       BeCare is designed for users who regularly use wearable devices to monitor their physical activity and health, as well as users who are health-aware and seek more understandable health analysis and personalized recommendations.
+          //     </p>
 
-              <p>
-                The proposal identifies two main user segments:
-              </p>
+          //     <p>
+          //       The proposal identifies two main user segments:
+          //     </p>
 
-              <ul>
-                <li>
-                  <strong>Wearable Device Users</strong> — users who regularly monitor physical activity and health through wearable devices and seek personalized diet and exercise recommendations.
-                </li>
-                <li>
-                  <strong>Health-Aware Users</strong> — users who monitor health conditions such as diabetes or high blood pressure and need deeper analysis and recommendations for health management.
-                </li>
-              </ul>
-            `,
-          },
+          //     <ul>
+          //       <li>
+          //         <strong>Wearable Device Users</strong> — users who regularly monitor physical activity and health through wearable devices and seek personalized diet and exercise recommendations.
+          //       </li>
+          //       <li>
+          //         <strong>Health-Aware Users</strong> — users who monitor health conditions such as diabetes or high blood pressure and need deeper analysis and recommendations for health management.
+          //       </li>
+          //     </ul>
+          //   `,
+          // },
         ],
       },
 
@@ -1715,7 +1715,7 @@ const PROJECTS = [
           </p>
 
           <p>
-            Interviews were conducted with two users: <strong>Lukman</strong>, a wearable device user, and <strong>Fakhri</strong>, a sports enthusiast. The interview questions explored how users monitor their health, track food intake and physical activity, what could make health monitoring easier, how a health application could support their goals, and what they expect from the application experience.
+            Interviews were conducted with two users: <strong>Mark</strong>, a wearable device user, and <strong>Joshua</strong>, a sports enthusiast. The interview questions explored how users monitor their health, track food intake and physical activity, what could make health monitoring easier, how a health application could support their goals, and what they expect from the application experience.
           </p>
         `,
 
@@ -1748,6 +1748,11 @@ const PROJECTS = [
                 The research also identified that users regularly use wearable devices to track physical activity, heart rate, and sleep quality, while looking for applications that can integrate wearable data for more comprehensive analysis.
               </p>
             `,
+            media: {
+              layout: "grid",
+              columns: 1,
+              items: ["images/projects/becare/empathy-map.png"],
+            },
           },
         ],
       },
@@ -1842,6 +1847,22 @@ const PROJECTS = [
               ],
             ],
           },
+          {
+            label: "User Persona",
+            body: `
+              <p>
+                Two user personas were developed to represent the main target users of BeCare: a wearable device user and a health-aware user. The personas help represent different user perspectives and provide a reference for designing an experience that addresses their needs for simplified data, integrated analysis, personalized recommendations, and actionable insights.
+              </p>
+            `,
+            media: {
+              layout: "grid",
+              columns: 1,
+              items: [
+                "images/projects/becare/user-persona-1.png",
+                "images/projects/becare/user-persona-2.png",
+              ],
+            },
+          }
         ],
       },
 
@@ -1880,51 +1901,51 @@ const PROJECTS = [
             ],
           },
 
-          {
-            label: "User Scenario",
-            body: `
-              <p>
-                The proposed BeCare experience begins when a user opens the application and is presented with a Splash Screen before being directed to Login. Existing users can log in, while new users can register for an account.
-              </p>
+          // {
+          //   label: "User Scenario",
+          //   body: `
+          //     <p>
+          //       The proposed BeCare experience begins when a user opens the application and is presented with a Splash Screen before being directed to Login. Existing users can log in, while new users can register for an account.
+          //     </p>
 
-              <p>
-                After login or registration, users enter their personal health information and synchronize their wearable device with the application. Once personalization and synchronization are completed, users are directed to the Homepage as the main navigation center.
-              </p>
+          //     <p>
+          //       After login or registration, users enter their personal health information and synchronize their wearable device with the application. Once personalization and synchronization are completed, users are directed to the Homepage as the main navigation center.
+          //     </p>
 
-              <p>
-                From the Homepage, users can view an overview of their health data and access more detailed health analysis. The analysis can include information such as platelets, glucose, sodium, cholesterol, steps, and other laboratory analysis results.
-              </p>
+          //     <p>
+          //       From the Homepage, users can view an overview of their health data and access more detailed health analysis. The analysis can include information such as platelets, glucose, sodium, cholesterol, steps, and other laboratory analysis results.
+          //     </p>
 
-              <p>
-                Users can also access Health Statistics to view information such as water consumption and steps, including the option to add a water-consumption schedule.
-              </p>
+          //     <p>
+          //       Users can also access Health Statistics to view information such as water consumption and steps, including the option to add a water-consumption schedule.
+          //     </p>
 
-              <p>
-                Through the Nutrition Scanning feature, users can analyze the composition of food they want to consume. Based on the collected health data, users can also access personalized Food Recommendations and Physical Exercise Recommendations.
-              </p>
+          //     <p>
+          //       Through the Nutrition Scanning feature, users can analyze the composition of food they want to consume. Based on the collected health data, users can also access personalized Food Recommendations and Physical Exercise Recommendations.
+          //     </p>
 
-              <p>
-                The Profile section allows users to update personal information, personalize their data, connect additional wearable devices, and log out of the application.
-              </p>
-            `,
-          },
+          //     <p>
+          //       The Profile section allows users to update personal information, personalize their data, connect additional wearable devices, and log out of the application.
+          //     </p>
+          //   `,
+          // },
 
-          {
-            label: "Navigation",
-            body: `
-              <p>
-                The navigation structure is designed to provide access to the main BeCare functions through a clear mobile interface. The main experience includes the Homepage, Health Analysis, Health Statistics, Nutrition Scanning, Recommendation, and Profile.
-              </p>
+          // {
+          //   label: "Navigation",
+          //   body: `
+          //     <p>
+          //       The navigation structure is designed to provide access to the main BeCare functions through a clear mobile interface. The main experience includes the Homepage, Health Analysis, Health Statistics, Nutrition Scanning, Recommendation, and Profile.
+          //     </p>
 
-              <p>
-                The Homepage provides a simplified health data overview and access to more detailed analysis. Health Statistics presents information such as water consumption and steps. Nutrition Scanning supports food composition analysis, while Recommendation provides personalized food and physical exercise recommendations based on wearable data.
-              </p>
+          //     <p>
+          //       The Homepage provides a simplified health data overview and access to more detailed analysis. Health Statistics presents information such as water consumption and steps. Nutrition Scanning supports food composition analysis, while Recommendation provides personalized food and physical exercise recommendations based on wearable data.
+          //     </p>
 
-              <p>
-                The Profile section provides access to personal information, health-data personalization, additional wearable-device connections, and logout.
-              </p>
-            `,
-          },
+          //     <p>
+          //       The Profile section provides access to personal information, health-data personalization, additional wearable-device connections, and logout.
+          //     </p>
+          //   `,
+          // },
 
           {
             label: "Information Architecture",
@@ -1937,33 +1958,40 @@ const PROJECTS = [
                 The architecture connects the main areas of BeCare, including health overview and analysis, health statistics, nutrition scanning, personalized recommendations, and profile management.
               </p>
             `,
+            media: {
+              layout: "grid",
+              columns: 1,
+              items: [
+                "images/projects/becare/information-architecture.png"
+              ],
+            },
           },
 
-          {
-            label: "User Flow",
-            body: `
-              <p>
-                The user flow describes the sequence of interactions within the proposed BeCare application, starting from authentication and continuing through personalization, wearable synchronization, health monitoring, analysis, recommendations, and profile management.
-              </p>
+          // {
+          //   label: "User Flow",
+          //   body: `
+          //     <p>
+          //       The user flow describes the sequence of interactions within the proposed BeCare application, starting from authentication and continuing through personalization, wearable synchronization, health monitoring, analysis, recommendations, and profile management.
+          //     </p>
 
-              <p>
-                The flow begins with Splash Screen, followed by Login or Registration. After authentication, users complete personalization and synchronize their wearable device before reaching the Homepage. From there, users can access the application's main health-related features and return to Profile when managing their account and connected devices.
-              </p>
-            `,
-          },
+          //     <p>
+          //       The flow begins with Splash Screen, followed by Login or Registration. After authentication, users complete personalization and synchronize their wearable device before reaching the Homepage. From there, users can access the application's main health-related features and return to Profile when managing their account and connected devices.
+          //     </p>
+          //   `,
+          // },
 
-          {
-            label: "Wireframe",
-            body: `
-              <p>
-                The wireframing stage translated the planned application structure and user flow into an initial interface framework. The wireframes establish the layout and structure of the BeCare interface before the high-fidelity design stage.
-              </p>
+          // {
+          //   label: "Wireframe",
+          //   body: `
+          //     <p>
+          //       The wireframing stage translated the planned application structure and user flow into an initial interface framework. The wireframes establish the layout and structure of the BeCare interface before the high-fidelity design stage.
+          //     </p>
 
-              <p>
-                The wireframing work forms part of the transition from the proposed information architecture and navigation structure toward the final visual interface.
-              </p>
-            `,
-          },
+          //     <p>
+          //       The wireframing work forms part of the transition from the proposed information architecture and navigation structure toward the final visual interface.
+          //     </p>
+          //   `,
+          // },
         ],
       },
 
@@ -1997,6 +2025,11 @@ const PROJECTS = [
                 The design guideline was intended to maintain visual consistency and support clear presentation of information throughout the interface.
               </p>
             `,
+            media: {
+              layout: "grid",
+              columns: 1,
+              items: ["images/projects/becare/design-system.png"],
+            },
           },
 
           {
@@ -2006,6 +2039,16 @@ const PROJECTS = [
                 The high-fidelity prototype was developed using <strong>Figma</strong> to visualize the proposed BeCare interface and interactions. The prototype represents the application's main health-tracking experience, including health data analysis, statistics, nutrition scanning, personalized recommendations, and profile management.
               </p>
             `,
+            media: {
+              layout: "grid",
+              columns: 1,
+              items: [
+                "images/projects/becare/mockup-1.png",
+                "images/projects/becare/mockup-2.png"
+              ],
+            },
+            cta: "EXPLORE LIVE FIGMA",
+            url: "https://www.figma.com/proto/2ThtB0tCKq45JyojoLDktH/ALFINA-ANDRIANI---UIX-Design?node-id=27-32236&p=f&viewport=171%2C45%2C0.04&t=j2g0EoHAQYkDxFow-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=27%3A32183&page-id=25%3A3407",
           },
         ],
       },
@@ -2044,7 +2087,6 @@ const PROJECTS = [
             <li><strong>3 usability tasks</strong></li>
             <li><strong>Success Rate:</strong> 100% direct success across all three tasks</li>
             <li><strong>Error Rate:</strong> 18% / 37.5% / 20% missclick rate for Tasks 1–3</li>
-            <li><strong>User Satisfaction:</strong> measured using a 1–5 Opinion Scale</li>
             <li><strong>Tool:</strong> Maze</li>
           </ul>
         `,
