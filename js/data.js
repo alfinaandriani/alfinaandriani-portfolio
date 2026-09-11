@@ -1431,9 +1431,7 @@ const PROJECTS = [
             media: {
               layout: "grid",
               columns: 1,
-              items: [
-                "images/projects/sipilu/information-architecture.png"
-              ],
+              items: ["images/projects/sipilu/information-architecture.png"],
             },
           },
 
@@ -1862,7 +1860,7 @@ const PROJECTS = [
                 "images/projects/becare/user-persona-2.png",
               ],
             },
-          }
+          },
         ],
       },
 
@@ -1961,9 +1959,7 @@ const PROJECTS = [
             media: {
               layout: "grid",
               columns: 1,
-              items: [
-                "images/projects/becare/information-architecture.png"
-              ],
+              items: ["images/projects/becare/information-architecture.png"],
             },
           },
 
@@ -2044,7 +2040,7 @@ const PROJECTS = [
               columns: 1,
               items: [
                 "images/projects/becare/mockup-1.png",
-                "images/projects/becare/mockup-2.png"
+                "images/projects/becare/mockup-2.png",
               ],
             },
             cta: "EXPLORE LIVE FIGMA",
@@ -2093,6 +2089,7 @@ const PROJECTS = [
       },
     ],
   },
+
   {
     id: "uiux-teras-rayu",
     name: "Teras Rayu",
@@ -2123,84 +2120,41 @@ const PROJECTS = [
         kind: "accordion",
         body: `
           <p>
-            Teras Rayu is a mobile e-commerce application concept for pastry and bakery products, including gluten-free options, with an additional workshop reservation experience.
+            Teras Rayu is a pastry and bakery business in Surabaya that offers gluten-free products through its café. This project focuses on designing a mobile e-commerce application specifically for Teras Rayu to support customers in discovering products, placing pastry and bakery orders, and reserving creative workshops.
           </p>
-
+          
           <p>
-            The project was designed to provide users with an easier way to explore products, select food based on their preferences, place orders, and reserve workshops through a single application.
-          </p>
-
-          <p>
-            The proposal was developed for the <strong>UI/UX Design Competition Dies Natalis Fasilkom UPN "Veteran" Jawa Timur 2024</strong> by Tim Galaksi.
+            The design process follows the Design Thinking approach, starting with user research to understand customer needs and pain points, followed by problem definition, solution ideation, prototyping, and usability testing. The resulting prototype brings product ordering and workshop reservations into a single digital experience for Teras Rayu customers.
           </p>
         `,
 
         items: [
           {
-            label: "Background",
+            label: "Problem Statement",
             body: `
               <p>
-                The design of Teras Rayu was motivated by the growth of the food and beverage industry and increasing interest in healthier food products, including gluten-free products. The proposal positions Teras Rayu as an e-commerce platform for pastry and bakery products that can also provide access to creative workshops.
+                Based on interviews with two participants interested in pastry, bakery, and workshop activities, several user needs were identified when interacting with a cake shop and its products. Users wanted to find cakes that matched their tastes and preferences while considering quality and price before purchasing.
               </p>
 
               <p>
-                The application is intended to help extend the reach of Teras Rayu's products while providing users with an intuitive shopping experience and access to workshop activities.
+                Users also needed an easier way to navigate an e-commerce application and complete payments. In addition, they wanted recommendations or reviews when considering a cake shop and clearer information about workshops, including the reservation process and relevant details.
               </p>
             `,
           },
 
           {
-            label: "Goals & Benefits",
+            label: "Problem Solution",
             body: `
               <p>
-                The proposal identifies several objectives for the Teras Rayu application:
+                The proposed solution is a mobile e-commerce application designed specifically for Teras Rayu. The application provides product discovery and ordering features, including detailed search and filtering, product information, reviews and ratings, cart and checkout, and order history.
               </p>
 
-              <ul>
-                <li>Utilize the growing market potential and demand for healthy and gluten-free food products.</li>
-                <li>Reach consumers with specific dietary needs and an interest in health.</li>
-                <li>Provide a variety of high-quality pastry and other products, including healthy and gluten-free options.</li>
-                <li>Increase cafe engagement through baking, pastry, and other creative workshops.</li>
-                <li>Build a brand associated with high-quality gluten-free pastry and bakery products.</li>
-              </ul>
+              <p>
+                For Teras Rayu's workshop activities, the application also provides workshop details, schedules, reservation, payment, and e-ticket access. These features are designed to make product ordering and workshop reservations more straightforward within the Teras Rayu digital experience.
+              </p>
             `,
           },
 
-          {
-            label: "Target Users",
-            body: `
-              <p>
-                The proposal identifies three main target user groups:
-              </p>
-
-              <ul>
-                <li>
-                  <strong>Young Generation</strong> — users who are accustomed to technology and prioritize easy access and an intuitive user experience. Interactive features and social media integration are considered suitable for this group.
-                </li>
-                <li>
-                  <strong>Active and Creative Communities</strong> — individuals interested in creative activities such as cooking and baking who can use the workshop reservation feature to learn and explore new recipes.
-                </li>
-                <li>
-                  <strong>Healthy Lifestyle Enthusiasts</strong> — users who care about health and prefer healthy, high-quality food products. The application provides food options with nutritional information.
-                </li>
-              </ul>
-            `,
-          },
-
-          {
-            label: "Application Limitations",
-            body: `
-              <p>
-                The proposal also identifies several limitations of the Teras Rayu application:
-              </p>
-
-              <ul>
-                <li>Product variants may be limited, meaning users may not find every pastry or bakery product they want.</li>
-                <li>Workshop participation may be limited by physical venue capacity or instructor availability.</li>
-                <li>Application performance depends on the user's device hardware and internet connectivity.</li>
-              </ul>
-            `,
-          },
         ],
       },
 
@@ -2238,11 +2192,7 @@ const PROJECTS = [
         kind: "accordion",
         body: `
           <p>
-            The Empathize stage focused on understanding the needs and experiences of users who are interested in pastry, bakery products, and workshop activities.
-          </p>
-
-          <p>
-            The proposal used interviews with <strong>two participants</strong> who had an interest in pastry and bakery and workshop activities. The interview results were then mapped into an <strong>Empathy Map</strong> to identify user needs, thoughts, feelings, and behaviors.
+            The Empathize stage focused on understanding potential customers' experiences, needs, motivations, and pain points related to purchasing pastry and bakery products and participating in workshops offered by Teras Rayu.
           </p>
         `,
 
@@ -2251,17 +2201,14 @@ const PROJECTS = [
             label: "Empathy Map",
             body: `
               <p>
-                The Empathy Map summarizes the experiences and needs identified from the interviews. Users expressed interest in finding pastry and bakery products with unique variations, wanted an easy ordering process, and showed a preference for gluten-free products.
-              </p>
-
-              <p>
-                Users also considered product quality and price before purchasing, looked for recommendations or online reviews, and wanted clear information about workshops, including schedules, prices, and materials.
-              </p>
-
-              <p>
-                Frustration could occur when application navigation or payment processes were difficult, while unclear workshop information could create confusion during the reservation process.
+                An empathy map was created based on interviews with two participants interested in pastry & bakery and workshop activities. It highlights their needs, motivations, preferences, and pain points to build a deeper understanding of the target users.
               </p>
             `,
+            media: {
+              layout: "grid",
+              columns: 1,
+              items: ["images/projects/teras-rayu/empathy-map.png"],
+            },
           },
         ],
       },
@@ -2272,11 +2219,11 @@ const PROJECTS = [
         kind: "accordion",
         body: `
           <p>
-            The Define stage analyzed the insights gathered during Empathize to formulate the main user-centered problems that should be addressed in the Teras Rayu application.
+            The Define stage translated the findings from the user research into specific user needs and problem statements. These insights were formulated into Point of View statements to establish the design direction for the Teras Rayu application.
           </p>
 
           <p>
-            The interview findings and Empathy Map were translated into <strong>Point of View (POV)</strong> statements and <strong>How Might We (HMW)</strong> questions, which became the basis for generating solution ideas in the Ideate stage.
+            The defined problems covered product discovery, application navigation and payment, access to recommendations and reviews, and clarity of workshop information and reservations.
           </p>
         `,
 
@@ -2285,7 +2232,7 @@ const PROJECTS = [
             label: "Point of View",
             body: `
               <p>
-                Four Point of View statements were formulated based on the identified user needs:
+                The Point of View statements describe the main user needs identified from the research and translate them into problems that the Teras Rayu application could address.
               </p>
             `,
             kind: "table",
@@ -2318,7 +2265,7 @@ const PROJECTS = [
             label: "How Might We",
             body: `
               <p>
-                The POV statements were transformed into four How Might We questions to define opportunities for improving the user experience.
+                The Point of View statements were transformed into How Might We questions to frame the identified user needs as opportunities for designing the Teras Rayu application.
               </p>
             `,
             kind: "table",
@@ -2355,11 +2302,11 @@ const PROJECTS = [
         kind: "accordion",
         body: `
           <p>
-            The Ideate stage focused on transitioning from the defined problems toward potential solutions. The proposal used a <strong>Brainwriting</strong> process in which feature ideas were generated and mapped to the corresponding HMW questions.
+            The Ideate stage translated the identified user needs into potential features for the Teras Rayu application. The proposed solutions focused on improving product discovery, ordering, payment, reviews, and workshop reservations.
           </p>
 
           <p>
-            The proposed ideas focused on improving product discovery, navigation, checkout, workshop reservation, order history, reviews, and access to food and workshop information.
+            These solutions were then organized into an information architecture to define the structure and relationship between the application's content and features.
           </p>
         `,
 
@@ -2368,7 +2315,7 @@ const PROJECTS = [
             label: "Solution Brainstorming",
             body: `
               <p>
-                The Brainwriting results produced feature ideas connected to the four HMW questions:
+                Brainwriting was used to generate potential solutions based on the How Might We questions. The ideas were focused on addressing the identified needs throughout the Teras Rayu ordering and workshop reservation experience.
               </p>
             `,
             kind: "table",
@@ -2387,49 +2334,18 @@ const PROJECTS = [
           },
 
           {
-            label: "User Scenario",
+            label: "Information Architecture",
             body: `
               <p>
-                The proposed scenario follows <strong>Irina Darva</strong>, a culinary student who wants to explore quality pastry and bakery products and participate in creative workshops.
-              </p>
-
-              <p>
-                Darva opens the Teras Rayu application and sees the Splash Screen, followed by the Onboarding Screen. She can read the information or skip it before being directed to the Login page.
-              </p>
-
-              <p>
-                If she does not have an account, Darva can register manually using her full name, phone number, email, and password. The application also provides login options using Google or Facebook. After registration, she returns to the Login page and enters her registered credentials.
-              </p>
-
-              <p>
-                On the Home page, Darva can explore Teras Rayu's menu and filter products by categories such as cake, food, or drink. The page also contains promotional banners and a bottom navigation bar with Home, Workshop, Orders, and Profile.
-              </p>
-
-              <p>
-                Darva then explores the Workshop section, selects a workshop, reviews its details, and proceeds to payment. After the payment is successful, she receives a payment-success notification.
-              </p>
-
-              <p>
-                Darva then returns to the Home page and selects the Order menu to purchase pastry and bakery products. She explores the menu details, adds items to the cart, and proceeds to payment. After successful payment, she receives another payment-success notification.
-              </p>
-
-              <p>
-                Finally, Darva opens the Profile section to check her personal information, manage saved addresses, view available vouchers, change her password if needed, and view her order history.
-              </p>
-            `,
-          },
-
-          {
-            label: "Flowchart",
-            body: `
-              <p>
-                The flowchart represents the overall interaction flow of the Teras Rayu application, connecting the main user journeys from entering the application through product ordering, workshop reservation, order management, and profile access.
+                The information architecture structures the main content and features of the Teras Rayu application. It provides the foundation for organizing product ordering, workshop reservations, and supporting information before moving into the wireframing stage.
               </p>
             `,
             media: {
               layout: "grid",
               columns: 1,
-              items: ["images/projects/teras-rayu/flowchart.png"],
+              items: [
+                "images/projects/teras-rayu/information-architecture.png",
+              ],
             },
           },
         ],
@@ -2441,7 +2357,11 @@ const PROJECTS = [
         kind: "accordion",
         body: `
           <p>
-            The Prototype stage translated the solution ideas from the Ideate stage into interface designs. The proposal describes an initial <strong>low-fidelity wireframe</strong> followed by the development of the interface and high-fidelity prototype.
+            The Prototype stage translated the proposed solutions and information architecture into the interface design for the Teras Rayu mobile application. The process started with wireframes and progressed into a high-fidelity prototype.
+          </p>
+
+          <p>
+            A design system was also prepared to establish consistent visual elements and support the development of the application interface.
           </p>
         `,
 
@@ -2450,11 +2370,7 @@ const PROJECTS = [
             label: "Design System",
             body: `
               <p>
-                Before designing the interface, a design guideline was created to support a consistent visual direction. The main branding colors are <strong>yellow (#FFB900)</strong> and <strong>brown (#491D00)</strong>.
-              </p>
-
-              <p>
-                Yellow is described in the proposal as representing cheerfulness, energy, and optimism, while brown provides a natural and solid impression. The typography uses <strong>TT Commons</strong>, a modern sans-serif typeface intended to support readability, simplicity, and functionality.
+                A design system was prepared as a visual foundation for the Teras Rayu application. It defines the visual elements used throughout the interface, including colors, option menu, logo, and navigation components.
               </p>
             `,
             media: {
@@ -2465,92 +2381,45 @@ const PROJECTS = [
           },
 
           {
-            label: "Information Architecture",
+            label: "Wireframe",
             body: `
               <p>
-                The Information Architecture organizes the application's information structure to support the interface design process. The proposal represents the architecture in the form of a <strong>sitemap</strong>.
+                Wireframes were created to define the structure and layout of the Teras Rayu application before moving into the high-fidelity design. The wireframes helped organize the main content, navigation, and interactions across the product ordering and workshop reservation flows.
               </p>
             `,
             media: {
               layout: "grid",
               columns: 1,
               items: [
-                "images/projects/teras-rayu/information-architecture.png",
+                "images/projects/teras-rayu/wireframe-1.png",
+                "images/projects/teras-rayu/wireframe-2.png",
+                "images/projects/teras-rayu/wireframe-3.png",
               ],
             },
           },
 
           {
-            label: "Wireframe",
+            label: "High Fidelity",
             body: `
               <p>
-                Before creating the high-fidelity prototype, the prototyping process began with a <strong>low-fidelity wireframe</strong>. The wireframe establishes the initial structure and layout of the application's screens before the final interface design.
+                The high-fidelity prototype applies the visual design system to the Teras Rayu mobile application. The prototype covers the main customer experience, including product discovery, product details, ordering, checkout, order history, workshop information, and workshop reservations.
+              </p>
+
+              <p>
+                The interface is designed around Teras Rayu's pastry and bakery products and its workshop activities, providing customers with a single digital experience to explore products and access the services offered by the business.
               </p>
             `,
             media: {
               layout: "grid",
               columns: 1,
-              items: ["images/projects/teras-rayu/wireframe.png"],
+              items: [
+                "images/projects/teras-rayu/mockup-1.png",
+                "images/projects/teras-rayu/mockup-2.png",
+                "images/projects/teras-rayu/mockup-3.png",
+              ],
             },
-          },
-
-          {
-            label: "Feature Design",
-            body: `
-              <p>
-                The proposal documents the design of the main Teras Rayu application features, covering the initial application experience, authentication, product ordering, workshop reservation, order management, and profile.
-              </p>
-            `,
-            items: [
-              {
-                label: "Splash Screen",
-                body: `
-                  <p>
-                    The Splash Screen is the first screen displayed when the application is opened. It contains the Teras Rayu logo and short messages about the application and its benefits before directing users to the Login or Register page.
-                  </p>
-                `,
-              },
-              {
-                label: "Login & Register",
-                body: `
-                  <p>
-                    Users can log in using their existing account or use Google and Facebook login options. New users can register by providing their name, email, and password before being directed to the Home page.
-                  </p>
-                `,
-              },
-              {
-                label: "Home",
-                body: `
-                  <p>
-                    The Home page provides access to the application's main features through the bottom navigation bar. Users can browse product cards based on categories, open product details, customize an order by selecting product size and adding notes, view notifications, and access the shopping cart.
-                  </p>
-                `,
-              },
-              {
-                label: "Workshop",
-                body: `
-                  <p>
-                    The Workshop feature presents available workshops and provides search and filtering options based on user interests. Users can save workshops, open workshop cards to view detailed information, continue to payment for registration, and access an e-Ticket after successful payment.
-                  </p>
-                `,
-              },
-              {
-                label: "Orders",
-                body: `
-                  <p>
-                    The Orders feature allows users to view order history and ongoing food orders or workshop reservations. Users can track food-order status and estimated completion time, view workshop schedules and details, repeat previous food orders or workshop registrations, and provide ratings or feedback through order history.
-                  </p>
-                `,
-              },
-              {
-                label: "Profile",
-                body: `
-                  <p>
-                    The Profile page contains user information such as profile photo and name. Users can update their profile information, add and save delivery addresses, and view available vouchers.
-                  </p>
-                `,
-              },
-            ],
+            cta: "EXPLORE LIVE FIGMA",
+            url: "https://www.figma.com/proto/2ThtB0tCKq45JyojoLDktH/ALFINA-ANDRIANI---Portfolio?node-id=28-97333&p=f&viewport=-24%2C158%2C0.09&t=m1HEIipEzbtQPBgM-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=28%3A97328&page-id=27%3A26640",
           },
         ],
       },
@@ -2604,44 +2473,9 @@ const PROJECTS = [
           </ul>
         `,
       },
-
-      {
-        id: "technology",
-        label: "Technology",
-        kind: "desc",
-        body: `
-          <p>
-            The proposal describes several technologies intended for the Teras Rayu application:
-          </p>
-
-          <ul>
-            <li><strong>Flutter & Dart</strong> — for developing the responsive mobile interface across Android and iOS.</li>
-            <li><strong>Node.js</strong> — for the backend server.</li>
-            <li><strong>Firebase</strong> — for authentication, data storage, push notifications, real-time database management, and analytics.</li>
-            <li><strong>Google Cloud Platform</strong> — for application hosting and infrastructure.</li>
-            <li><strong>Payment Gateway API</strong> — such as Midtrans or Doku for payment transactions.</li>
-            <li><strong>RESTful API</strong> — for communication between the frontend and backend.</li>
-            <li><strong>OAuth2</strong> — for social login authentication through Google and Facebook.</li>
-          </ul>
-        `,
-      },
-
-      {
-        id: "conclusion",
-        label: "Conclusion",
-        kind: "desc",
-        body: `
-          <p>
-            Teras Rayu is proposed as a digital platform that combines access to pastry and bakery products, including gluten-free options, with workshop reservations. The concept aims to provide a more convenient and informative shopping experience while giving users an opportunity to participate in baking, pastry, and other creative activities.
-          </p>
-
-          <p>
-            The proposal concludes that the application can combine digital shopping convenience with workshop experiences to support users interested in quality food products, healthy eating, and creative activities.
-          </p>
-        `,
-      },
     ],
   },
+  
   {
     id: "uiux-nutrikids",
     name: "NutriKids",
