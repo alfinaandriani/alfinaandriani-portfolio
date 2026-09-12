@@ -2630,22 +2630,16 @@ const PROJECTS = [
     tags: [
       "User Interface Design",
       "Mobile App",
-      "E-Commerce",
       "Figma",
-      "Wireframing",
-      "Prototyping",
     ],
     meta: [
       { label: "Type", value: "Mobile App" },
       { label: "Role", value: "UI/UX Designer" },
       { label: "Year", value: "2024" },
     ],
-
     detailIntro:
-      "A mobile e-commerce application concept designed to facilitate online buying and selling of used books, with features for book discovery, wishlist management, and purchasing.",
-
+      "ExBook is a mobile app mockup created for a Mobile Programming final project, designed as an interface for a used book buying and selling platform.",
     template: "uiux-default",
-
     links: [
       {
         type: "figma",
@@ -2653,7 +2647,6 @@ const PROJECTS = [
         url: "https://www.figma.com/proto/2ThtB0tCKq45JyojoLDktH/ALFINA-ANDRIANI---Portfolio?node-id=30-99664&p=f&t=vU4GsTRf2opGDs5N-1&scaling=scale-down&content-scaling=fixed&page-id=25%3A3409&starting-point-node-id=30%3A99617",
       },
     ],
-
     sections: [
       {
         id: "overview",
@@ -2668,107 +2661,11 @@ const PROJECTS = [
             The project covers the design of the application's user interface, followed by implementation of the interface in Flutter as part of the mobile application project.
           </p>
         `,
-      },
-
-      {
-        id: "objective",
-        label: "Objective",
-        kind: "accordion",
-        body: `
-          <p>
-            The main objective of ExBook is to provide a platform that makes buying and selling used books online easier.
-          </p>
-        `,
-        items: [
-          {
-            label: "Key Objectives",
-            body: `
-              <ul>
-                <li>Provide an accessible and easy-to-use platform for buying and selling used books.</li>
-                <li>Help users obtain books at more affordable prices compared with new books.</li>
-                <li>Provide a search feature to help users find the books they are looking for.</li>
-              </ul>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "design",
-        label: "UI Design",
-        kind: "accordion",
-        body: `
-          <p>
-            The UI design process included identifying user needs and the main application features, followed by creating the ExBook interface mockup using Figma.
-          </p>
-
-          <p>
-            The designed interface covers the main flow of the application from authentication and book discovery to book details, wishlist, checkout, and order history.
-          </p>
-        `,
-        items: [
-          {
-            label: "Main Interface",
-            body: `
-              <p>
-                The main interface includes the Home, Orders, Wishlist, and Profile sections. Users can browse available books, search for specific books, save books to their wishlist, open book details, and proceed to purchase.
-              </p>
-            `,
-          },
-          {
-            label: "Book Detail",
-            body: `
-              <p>
-                The book detail interface presents the book image, title, author, page count, publication date, book condition, category, description, price, and a purchase action.
-              </p>
-            `,
-          },
-          {
-            label: "Checkout",
-            body: `
-              <p>
-                The checkout interface presents shipping information, the selected book, and payment details including product subtotal, shipping subtotal, and total payment.
-              </p>
-            `,
-          },
-          {
-            label: "Orders & Wishlist",
-            body: `
-              <p>
-                The interface also includes a Wishlist section for saved books and an Orders section for active and completed orders.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "flow",
-        label: "User Flow",
-        kind: "desc",
-        body: `
-          <p>
-            The application flow starts with Login or Signup. After authentication, users can access the Home page to browse and search for books, add books to their wishlist, view book details, and proceed to checkout. Users can also access their profile, order details, and order history.
-          </p>
-        `,
-      },
-
-      {
-        id: "mockup",
-        label: "Mockup",
-        kind: "desc",
-        body: `
-          <p>
-            The high-level interface design was created as a mockup in Figma and covers the main screens required for the ExBook application flow, including authentication, book discovery, wishlist, book details, checkout, orders, and profile.
-          </p>
-        `,
         media: {
           layout: "grid",
           columns: 1,
           items: ["images/projects/exbook/mockup.png"],
         },
-        cta: "OPEN LIVE FIGMA",
-        url: "https://www.figma.com/proto/2ThtB0tCKq45JyojoLDktH/ALFINA-ANDRIANI---UIX-Design?node-id=27-32236&p=f&viewport=171%2C45%2C0.04&t=j2g0EoHAQYkDxFow-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=27%3A32183&page-id=25%3A3407",
       },
     ],
   },
@@ -2780,26 +2677,19 @@ const PROJECTS = [
     bg: "#F1F1F1",
     color: "#57865E",
     image: "images/projects/qbit.png",
-
     tags: [
       "User Interface Design",
       "Mobile App",
       "Figma",
-      "High-Fidelity Prototype",
-      "User Flow",
     ],
-
     meta: [
       { label: "Type", value: "Mobile App" },
       { label: "Role", value: "UI/UX Designer" },
       { label: "Year", value: "2022" },
     ],
-
     detailIntro:
-      "A mobile application concept for supporting small-scale urban farming through consultation, land design, seed marketplace, and plant monitoring features.",
-
+      "QBit is a mobile app mockup created to accompany a business proposal (PKM-K) for a small-scale plant cultivation concept, developed for the Business Knowledge course.",
     template: "uiux-default",
-
     links: [
       {
         type: "figma",
@@ -2807,7 +2697,6 @@ const PROJECTS = [
         url: "https://www.figma.com/proto/2ThtB0tCKq45JyojoLDktH/ALFINA-ANDRIANI---Portfolio?node-id=29-98817&p=f&t=mmCPXUOpSIawJUMu-1&scaling=scale-down&content-scaling=fixed&page-id=25%3A3408&starting-point-node-id=29%3A98817",
       },
     ],
-
     sections: [
       {
         id: "overview",
@@ -2815,90 +2704,11 @@ const PROJECTS = [
         kind: "desc",
         body: `
           <p>
-            QBit is a mobile application concept developed to support small-scale urban farming. The application combines several services, including consultation, land design, a seed marketplace, and plant monitoring.
+            QBit was proposed in a <strong>business proposal </strong> as a platform to help grow plants on a small scale, such as home gardens, by offering quality seeds, planting media, and cultivation consultation suited to their region's climate and land conditions. The proposal describes the business concept, feasibility calculations, and Business Model Canvas, with the actual application planned to be built by a third-party app development service.
           </p>
 
           <p>
-            The project includes the design of a high-fidelity mobile application interface to visualize the proposed concept and its main features.
-          </p>
-        `,
-      },
-
-      {
-        id: "problem",
-        label: "Problem & Objective",
-        kind: "accordion",
-        body: `
-          <p>
-            The project addresses challenges faced by people interested in small-scale plant cultivation, particularly the selection of suitable seeds and planting media based on local conditions, as well as the utilization of limited space for cultivation.
-          </p>
-        `,
-        items: [
-          {
-            label: "Problem",
-            body: `
-              <ul>
-                <li>Plant cultivation needs to consider differences in climate and regional conditions.</li>
-                <li>Small-scale cultivation can be limited by the availability of suitable land.</li>
-                <li>Users may need guidance in selecting seeds and planting media suitable for their area.</li>
-                <li>Limited land requires appropriate layout and design to maximize its use.</li>
-              </ul>
-            `,
-          },
-          {
-            label: "Objective",
-            body: `
-              <p>
-                The proposed application aims to help people in East Java who want to start small-scale cultivation by supporting seed and planting-media selection according to regional conditions, as well as land layout and design.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "features",
-        label: "Application Features",
-        kind: "table",
-        columns: ["Feature", "Purpose"],
-        rows: [
-          [
-            "Consultation",
-            "Support users in obtaining guidance related to plant cultivation and suitable seeds.",
-          ],
-          [
-            "Land Design",
-            "Help users plan the layout and design of limited cultivation areas.",
-          ],
-          [
-            "Seed Marketplace",
-            "Provide a marketplace for purchasing plant seeds and related cultivation products.",
-          ],
-          [
-            "Plant Monitoring",
-            "Support users in monitoring and caring for cultivated plants.",
-          ],
-        ],
-      },
-
-      {
-        id: "design",
-        label: "Interface Design",
-        kind: "desc",
-        body: `
-          <p>
-            The interface was designed as a high-fidelity mobile prototype in Figma. The design represents the proposed QBit application and its main service areas, including authentication, the home dashboard, consultation, marketplace, land design, and plant monitoring.
-          </p>
-        `,
-      },
-
-      {
-        id: "mockup",
-        label: "Mockup",
-        kind: "desc",
-        body: `
-          <p>
-            The project produced a two-dimensional application design mockup to visualize the proposed QBit interface and features.
+            As part of the proposal, I designed the <strong>mobile app mockup</strong> included as a supporting deliverable, covering screens such as home page, a <strong>consultation feature (QCons)</strong>, a land/design customization feature (QDesign), a <strong>seed marketplace (QSeed)</strong>, and a QR code-based plant care guide. The mockup used a <strong>green color palette</strong> to reflect the app's agricultural theme and was presented as a visual concept to support the proposal, rather than a fully built application.
           </p>
         `,
         media: {
@@ -2906,8 +2716,6 @@ const PROJECTS = [
           columns: 1,
           items: ["images/projects/qbit/mockup.png"],
         },
-        cta: "OPEN LIVE FIGMA",
-        url: "https://www.figma.com/proto/2ThtB0tCKq45JyojoLDktH/ALFINA-ANDRIANI---Portfolio?node-id=29-98817&p=f&t=mmCPXUOpSIawJUMu-1&scaling=scale-down&content-scaling=fixed&page-id=25%3A3408&starting-point-node-id=29%3A98817",
       },
     ],
   },
@@ -3560,6 +3368,7 @@ const PROJECTS = [
       },
     ],
   },
+  
   {
     id: "softdev-exbook",
     name: "ExBook",
@@ -3568,7 +3377,6 @@ const PROJECTS = [
     color: "#7c410b",
     image: "images/projects/exbook.png",
     listImage: "images/projects/exbook.png",
-
     tags: [
       "Flutter",
       "Dart",
@@ -3576,19 +3384,15 @@ const PROJECTS = [
       "API Integration",
       "Mobile Development",
     ],
-
     meta: [
       { label: "Framework", value: "Flutter" },
       { label: "Role", value: "Front End Dev" },
       { label: "Year", value: "2024" },
     ],
-
     detailIntro:
       "Implemented the ExBook mobile interface using Flutter and Dart, with Provider for state management and API integration for retrieving book data.",
-
     template: "exbook-softdev",
     mobile: "Mobile",
-
     links: [
       {
         type: "github",
@@ -3596,7 +3400,6 @@ const PROJECTS = [
         url: "https://github.com/DevitaFahliza/Exbook",
       },
     ],
-
     sections: [
       {
         id: "overview",
