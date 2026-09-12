@@ -2481,9 +2481,9 @@ const PROJECTS = [
     name: "NutriKids",
     category: "uiux",
     bg: "#FBE1E6",
-    color: "#FF6F61",
+    color: "#f84c3b",
     image: "images/projects/nutrikids.png",
-    tags: ["User Scenario", "Flowchart", "Wireframing", "Prototyping"],
+    tags: ["User Scenario", "Information Architecture", "Style Guide", "Mockup"],
     meta: [
       { label: "Type", value: "Mobile App" },
       { label: "Role", value: "UI/UX Designer" },
@@ -2507,81 +2507,18 @@ const PROJECTS = [
       {
         id: "overview",
         label: "Overview",
-        kind: "accordion",
-        body: `
-          <p>
-            NutriKids is a mobile application concept designed to support parents and caregivers in understanding children's nutrition and monitoring their growth and development.
-          </p>
-
-          <p>
-            The application provides access to nutritional information, healthy food recommendations, recipes, growth tracking, notifications, online consultation with nutrition experts, and account management.
-          </p>
-
-          <p>
-            The project was developed as a UI/UX design proposal for the <strong>UI/UX Design Competition Dies Natalis 2023</strong> and focuses on creating an accessible and interactive mobile experience for child nutrition and health information.
-          </p>
-        `,
-
-        items: [
-          {
-            label: "Problem Background",
-            body: `
-              <p>
-                Child malnutrition is associated with both undernutrition and overnutrition. The proposal identifies lack of understanding about proper nutrition and healthy eating as one of the factors that can contribute to malnutrition among children.
-              </p>
-
-              <p>
-                Parents and caregivers may also face difficulties in providing nutritious food that suits children's needs, preparing balanced meals, and understanding the nutritional requirements of children at different stages of development.
-              </p>
-
-              <p>
-                NutriKids was proposed to provide nutritional information, healthy and affordable menu recommendations, recipes, and child growth tracking to support parents and caregivers in making better-informed decisions about children's nutrition.
-              </p>
-            `,
-          },
-
-          {
-            label: "Goals",
-            body: `
-              <p>
-                The proposal identifies several goals for NutriKids:
-              </p>
-
-              <ul>
-                <li>Increase parents' awareness of the importance of proper nutrition for children.</li>
-                <li>Provide varied, healthy, and affordable meal recommendations.</li>
-                <li>Help parents monitor and track children's growth and development regularly.</li>
-                <li>Provide easy and fast access to educational articles about child nutrition.</li>
-              </ul>
-            `,
-          },
-
-          {
-            label: "Target Users",
-            body: `
-              <p>
-                The primary target users are <strong>parents and caregivers of children</strong> who want to monitor their children's growth and provide appropriate nutrition.
-              </p>
-
-              <p>
-                The proposal also identifies children under adult supervision, nutritionists, doctors and healthcare workers, educators and teachers, government and health organizations, and the general public as potential users or stakeholders of the application.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "design-direction",
-        label: "Design Direction",
         kind: "desc",
         body: `
           <p>
-            Before designing the interface, a design guideline was established to define the visual direction of NutriKids. The interface uses a pastel color palette consisting of a gradient of <strong>pastel red (#FF6F61)</strong> and <strong>pastel yellow (#FFC373)</strong>, supported by <strong>pastel green (#88C048)</strong>.
+            According to the <strong>World Health Organization (WHO)</strong>, malnutrition among children under five remains a serious global challenge, with millions affected by <strong>stunting, wasting, and obesity</strong>. In Indonesia, national health survey data shows that a significant percentage of children under five still experience nutritional problems, highlighting the need for accessible, reliable nutrition guidance for parents.
           </p>
 
           <p>
-            The color choices were intended to represent health and a child-friendly visual identity. The application uses <strong>Poppins</strong> as its typeface, with a canvas size of <strong>430 × 932 pixels</strong>.
+            Many parents struggle to provide healthy, age-appropriate meals due to <strong>limited nutrition knowledge</strong>, the perception that healthy food is expensive or unappealing, and the convenience of processed or fast food. This often leads to unbalanced diets and increases the risk of malnutrition in children.
+          </p>
+          
+          <p>
+            <strong>NutriKids</strong> was designed to address this gap by giving parents a single platform to access <strong>accurate nutrition information</strong>, <strong>affordable and easy-to-make recipes</strong>, <strong>professional nutritionist consultations</strong>, and a <strong>growth tracking</strong> feature helping them make informed decisions to support their child's healthy development.
           </p>
         `,
       },
@@ -2592,144 +2529,64 @@ const PROJECTS = [
         kind: "desc",
         body: `
           <p>
-            The usage scenario follows <strong>Nikita</strong>, a mother with a son named <strong>Ethan</strong>, who is 1 year and 2 months old. Nikita wants to ensure that Ethan receives healthy and nutritious food while monitoring his growth.
+            NutriKids is designed to be easy to use for parents or caregivers of children. The majority of NutriKids users are parents who want to ensure that their children receive healthy and nutritious meals while also being able to monitor their growth easily. In this scenario, a mother named Nikita has a 1-year-and-2-month-old son named Ethan. Nikita wants to make sure that Ethan receives healthy and nutritious meals every day while carefully monitoring his growth.
           </p>
 
           <p>
-            Nikita starts by opening NutriKids and going through the Splash Screen before reaching the Login or Register page. After logging in, she accesses the Growth feature and enters Ethan's growth data for screening.
+            To get started, Nikita opens the NutriKids application. The first screen that appears is the Splash Screen or Landing Page. To continue to the application, Nikita simply swipes the screen and is then directed to the Login or Register page. On the Login or Register page, Nikita logs into her account. If she does not have an account yet, she can select “Register” at the bottom of the page. She then needs to fill out a form with her personal information, such as her name, email address, phone number, and a secure password. Once completed, she presses the “Register” button to finish creating her account.
           </p>
 
           <p>
-            After viewing the screening result, Nikita decides to consult a nutritionist. She opens the Consultation feature, selects a nutritionist, and schedules a consultation based on the available date and time.
+            On the Home page, Nikita enters Ethan’s growth data through the “Growth” menu in the bottom navigation to perform a growth screening. After the screening results are displayed, Nikita realizes that Ethan’s nutritional status is not adequate for his age. Therefore, she decides to consult a nutritionist. She clicks the “Consultation” menu in the bottom navigation, selects the most suitable nutritionist, and schedules a consultation on her preferred date and time.
           </p>
 
           <p>
-            Following the consultation, Nikita returns to the Home page and selects a suitable recipe. The recipe page provides the ingredients, step-by-step preparation instructions, and nutritional information.
+            After the consultation, the nutritionist suggests that Ethan may need more variety in his meals. Nikita then returns to the Home page and selects food recipes that match Ethan’s nutritional needs. On the recipe page, Nikita can view a list of ingredients and step-by-step cooking instructions. She can also see nutritional information, which is very useful in choosing suitable meals for Ethan.
           </p>
 
           <p>
-            After several days, Nikita updates Ethan's latest height and weight data through the Profile section. She can then view the growth graph showing the child's height and weight over time before exiting the application.
+            After several days of providing Ethan with meals based on NutriKids’ recommendations, Nikita opens the “Profile” menu and selects the “Edit Child Data” feature to update Ethan’s latest height and weight information. After entering the updated data, Nikita views a growth chart showing Ethan’s height and weight from month to month. His growth trend appears consistent, giving Nikita reassurance that she is providing him with the right nutrition.
+          </p>
+
+          <p>
+            After monitoring Ethan’s condition and ensuring that he has reached a height and weight appropriate for his age, Nikita safely logs out of the application.
           </p>
         `,
       },
 
       {
-        id: "flowchart",
-        label: "Flowchart",
+        id: "information-architecture",
+        label: "Information Architecture",
         kind: "desc",
         body: `
           <p>
-            The flowchart visualizes the proposed usage flow of NutriKids, starting from the Splash Screen and continuing through authentication, the Home page, growth tracking, consultation, recipes, profile management, and the application exit flow.
-          </p>
-
-          <p>
-            The flow provides an overview of how users move between the main features and supports the planning of the application's interface and navigation.
+            The information architecture of NutriKids is organized around <strong>four main navigation menus</strong>: <strong>Home</strong>, <strong>Growth</strong>, <strong>Consultation</strong>, and <strong>Profile</strong>. The Home menu covers search, menu recommendations, and articles; Growth covers child data, screening, screening summary, growth condition, and condition-based recommendations; Consultation covers private consultation, the nutritionist/doctor list, and consultation details; while Profile covers user profile, child data, settings, help & support, and logout. This structure keeps core tasks <strong>tracking growth</strong>, <strong>getting nutrition advice</strong>, and <strong>consulting experts</strong> easily accessible from the bottom navigation.
           </p>
         `,
         media: {
           layout: "grid",
           columns: 1,
-          items: ["images/projects/nutrikids/flowchart.png"],
+          items: [
+            "images/projects/nutrikids/information-architecture.png"
+          ],
         },
       },
 
       {
-        id: "prototype",
-        label: "Prototype",
-        kind: "accordion",
-        body: `
-          <p>
-            The prototype translates the proposed NutriKids features into a mobile application interface. The design covers the main user journey from entering the application to accessing nutrition information, recipes, growth tracking, consultation, and profile management.
-          </p>
-        `,
-
-        items: [
-          {
-            label: "Splash Screen",
-            body: `
-              <p>
-                The Splash Screen is the first screen shown when users open NutriKids. It contains the NutriKids logo along with short messages describing the application and its benefits before directing users to the Login or Register page.
-              </p>
-            `,
-          },
-
-          {
-            label: "Login & Registration",
-            body: `
-              <p>
-                Users with an existing account can log in using their email address or phone number and password. New users can register by entering their name, phone number, email address, and password before continuing to the Home page.
-              </p>
-            `,
-          },
-
-          {
-            label: "Home",
-            body: `
-              <p>
-                After logging in or registering, users are directed to the Home page. The page contains healthy food recipes for children, nutritional and child-health articles, and a search feature to help users find relevant content.
-              </p>
-            `,
-          },
-
-          {
-            label: "Recipes",
-            body: `
-              <p>
-                The Recipe page presents available nutritious food recipes for children. Each recipe includes nutritional information, a list of ingredients, and clear step-by-step preparation instructions. The recipes provide options for different meals, from breakfast to dinner.
-              </p>
-            `,
-          },
-
-          {
-            label: "Growth Tracking",
-            body: `
-              <p>
-                The Growth feature allows parents or caregivers to monitor a child's physical growth based on previously entered height and weight data. The interface presents growth information through an interactive graph and compares the child's growth with general growth standards.
-              </p>
-
-              <p>
-                The proposal also describes notifications for significant changes in the child's growth that may require further attention.
-              </p>
-            `,
-          },
-
-          {
-            label: "Consultation",
-            body: `
-              <p>
-                The Consultation feature allows parents or caregivers to consult with nutritionists online regarding children's nutritional needs. Users can select a nutritionist, choose an available schedule, and book a consultation session.
-              </p>
-            `,
-          },
-
-          {
-            label: "Profile",
-            body: `
-              <p>
-                The Profile page provides access to user profile management, child data management, and notification settings. Users can update their profile information and manage their child's data according to their needs.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "design-system",
-        label: "Design Guideline",
+        id: "style-guide",
+        label: "Style Guide",
         kind: "desc",
         body: `
           <p>
-            The NutriKids design guideline establishes the visual foundation used for the interface design. The primary visual direction combines a pastel red-to-yellow gradient with pastel green as a supporting color.
-          </p>
-
-          <p>
-            The typography uses <strong>Poppins</strong>, selected to provide a modern and less rigid visual character. The design was created using a <strong>430 × 932 pixel</strong> canvas.
+            NutriKids uses <strong>Poppins</strong> as its primary typeface, chosen for its friendly and legible appearance across headings and body text. The color palette combines a warm <strong>coral red (#FF6F61)</strong> and <strong>soft peach (#FFC373)</strong> with a fresh <strong>green (#88C048)</strong>, reflecting the app's focus on health, nutrition, and approachability for parents. The logo pairs a simple leaf-inspired "N" mark with the NutriKids wordmark to reinforce the app's healthy, natural identity.
           </p>
         `,
         media: {
           layout: "grid",
           columns: 1,
-          items: ["images/projects/nutrikids/design-guideline.png"],
+          items: [
+            "images/projects/nutrikids/style-guide.png"
+          ],
         },
       },
 
@@ -2739,28 +2596,26 @@ const PROJECTS = [
         kind: "desc",
         body: `
           <p>
-            The high-fidelity interface presents the proposed NutriKids experience across its main features. The screens cover the initial Splash Screen, Login and Registration, Home, Recipes, Growth Tracking, Consultation, and Profile.
+            The <strong>Home screen</strong> presents menu recommendations, nutrition articles, and a notification center summarizing consultation messages and growth milestones, alongside a <strong>recipe detail page</strong> with ingredients, cooking steps, and estimated preparation time, and a <strong>Profile screen</strong> for managing account and child data.
           </p>
 
           <p>
-            The interface is designed to make nutritional information, healthy food recommendations, child growth data, and related functions accessible within a mobile application experience.
+            The <strong>Growth</strong> flow allows parents to record a child's growth screening history, input the latest weight, height, and age, and receive an screening result with a status summary and downloadable report.
+          </p>
+          
+          <p>
+            The <strong>Consultation</strong> flow lets parents browse a list of nutritionists, view expert profiles, book a consultation by date and time, and chat directly with the assigned nutritionist.
           </p>
         `,
         media: {
           layout: "grid",
           columns: 1,
           items: [
-            "images/projects/nutrikids/mockup-splash.png",
-            "images/projects/nutrikids/mockup-login-register.png",
-            "images/projects/nutrikids/mockup-home.png",
-            "images/projects/nutrikids/mockup-recipe.png",
-            "images/projects/nutrikids/mockup-growth.png",
-            "images/projects/nutrikids/mockup-consultation.png",
-            "images/projects/nutrikids/mockup-profile.png",
+            "images/projects/nutrikids/mockup-1.png",
+            "images/projects/nutrikids/mockup-2.png",
+            "images/projects/nutrikids/mockup-3.png"
           ],
         },
-        cta: "EXPLORE LIVE FIGMA",
-        url: "https://www.figma.com/proto/2ThtB0tCKq45JyojoLDktH/ALFINA-ANDRIANI---UIX-Design?node-id=28-88141&p=f&viewport=45%2C212%2C0.08&t=6Sg3ankilFQfwHpg-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=28%3A87645&page-id=25%3A3406",
       },
     ],
   },
