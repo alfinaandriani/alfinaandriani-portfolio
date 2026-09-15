@@ -100,6 +100,35 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .process-row {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    column-gap: 8px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #detail-layout .process-row__icon {
+    width: 100%;
+    max-width: 45px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #detail-layout .process-row__icon svg {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  #detail-layout .process-row__label {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+    font-size: 12px;
+  }
+
   .site-footer__inner {
     grid-template-columns: repeat(6, 1fr);
     row-gap: 40px;
