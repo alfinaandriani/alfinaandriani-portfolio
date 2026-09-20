@@ -113,6 +113,9 @@ function renderLinkButton(project) {
         } else if (link.type === "github") {
           icon = iconGithub();
           label = link.label || "GITHUB";
+        } else if (link.type === "pdf") {
+          icon = iconDocument();
+          label = link.label || "OPEN BRD";
         } else {
           return "";
         }
@@ -510,23 +513,34 @@ function renderSection(section) {
           </div>
         </section>`;
 
-    case "table":
+    case "table": {
+      let tableRendered = false;
+      const tableContent = Object.keys(section)
+        .map((key) => {
+          if (key === "body") {
+            return renderTextBody(section.body);
+          }
+
+          if (
+            !tableRendered &&
+            (key === "columns" || key === "rows") &&
+            section.columns &&
+            section.rows
+          ) {
+            tableRendered = true;
+            return renderTable(section);
+          }
+
+          return "";
+        })
+        .join("");
+
       return `
         <section class="detail-section" id="${section.id}">
-          <h2 class="detail-section__title" style="margin-bottom:24px;">
-            ${section.label.toUpperCase()}
-          </h2>
-          ${
-            section.body
-              ? `
-            <p class="detail-section__body" style="margin-bottom:24px;">
-              ${section.body}
-            </p>
-          `
-              : ""
-          }
-          ${renderTable(section)}
+          <h2 class="detail-section__title">${section.label.toUpperCase()}</h2>
+          ${tableContent}
         </section>`;
+    }
 
     default:
       return "";
@@ -601,5 +615,9 @@ function iconFigma() {
   </svg>`;
 }
 function iconDocument() {
-  return `<svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 2h9l5 5v15H6V2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M14 2v6h6" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>`;
+  return `<svg width="14" height="14" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 35C0 20.4177 0 13.1266 3.71356 8.01529C4.91288 6.36456 6.36456 4.91288 8.01529 3.71356C13.1266 0 20.4177 0 35 0C38.2626 0 41.1601 0 43.75 0.0415899L43.75 0.3143C43.7497 3.6277 43.7496 5.64598 44.0253 7.38694C45.5408 16.9551 53.0449 24.4593 62.6131 25.9747C64.354 26.2504 66.3723 26.2503 69.6857 26.25L69.9584 26.25C70 28.8399 70 31.7374 70 35C70 49.5823 70 56.8734 66.2864 61.9847C65.0871 63.6354 63.6354 65.0871 61.9847 66.2864C56.8734 70 49.5823 70 35 70C20.4177 70 13.1266 70 8.01529 66.2864C6.36456 65.0871 4.91288 63.6354 3.71356 61.9847C0 56.8734 0 49.5823 0 35ZM19.4444 24.3056C17.8336 24.3056 16.5278 25.6114 16.5278 27.2222C16.5278 28.8331 17.8336 30.1389 19.4444 30.1389H31.1111C32.7219 30.1389 34.0278 28.8331 34.0278 27.2222C34.0278 25.6114 32.7219 24.3056 31.1111 24.3056H19.4444ZM19.4444 39.8611C17.8336 39.8611 16.5278 41.1669 16.5278 42.7778C16.5278 44.3886 17.8336 45.6944 19.4444 45.6944H50.5556C52.1664 45.6944 53.4722 44.3886 53.4722 42.7778C53.4722 41.1669 52.1664 39.8611 50.5556 39.8611H19.4444Z" fill="currentColor"/>
+    <path d="M49.7868 6.4744C49.5969 5.27511 49.5839 3.7943 49.5834 0.254086C55.1819 0.621228 58.964 1.51887 61.9847 3.71356C63.6354 4.91288 65.0871 6.36456 66.2864 8.01529C68.4811 11.036 69.3788 14.8181 69.7459 20.4166C66.2057 20.4162 64.7249 20.4031 63.5256 20.2132C56.4535 19.0931 50.9069 13.5465 49.7868 6.4744Z" fill="currentColor"/>
+  </svg>
+`;
 }

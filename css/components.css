@@ -324,13 +324,15 @@
 
 /* Paragraphs and lists */
 .detail-section__body > p,
-.detail-section__body > ul {
+.detail-section__body > ul,
+.detail-section__body > ol {
   margin: 0 0 1em;
 }
 
 /* Remove bottom margin from the last content element */
 .detail-section__body > p:last-child,
-.detail-section__body > ul:last-child {
+.detail-section__body > ul:last-child,
+.detail-section__body > ol:last-child {
   margin-bottom: 0;
 }
 
@@ -339,7 +341,12 @@
   padding-left: 1.5em;
   list-style-type: disc;
 }
-.detail-section__body > ul > li {
+.detail-section__body > ol {
+  padding-left: 1.5em;
+  list-style-type: decimal;
+}
+.detail-section__body > ul > li,
+.detail-section__body > ol > li {
   display: list-item;
 }
 /* List items follow the same typography */

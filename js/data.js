@@ -2154,7 +2154,6 @@ const PROJECTS = [
               </p>
             `,
           },
-
         ],
       },
 
@@ -2475,7 +2474,7 @@ const PROJECTS = [
       },
     ],
   },
-  
+
   {
     id: "uiux-nutrikids",
     name: "NutriKids",
@@ -2483,7 +2482,12 @@ const PROJECTS = [
     bg: "#FBE1E6",
     color: "#f84c3b",
     image: "images/projects/nutrikids.png",
-    tags: ["User Scenario", "Information Architecture", "Style Guide", "Mockup"],
+    tags: [
+      "User Scenario",
+      "Information Architecture",
+      "Style Guide",
+      "Mockup",
+    ],
     meta: [
       { label: "Type", value: "Mobile App" },
       { label: "Role", value: "UI/UX Designer" },
@@ -2566,9 +2570,7 @@ const PROJECTS = [
         media: {
           layout: "grid",
           columns: 1,
-          items: [
-            "images/projects/nutrikids/information-architecture.png"
-          ],
+          items: ["images/projects/nutrikids/information-architecture.png"],
         },
       },
 
@@ -2584,9 +2586,7 @@ const PROJECTS = [
         media: {
           layout: "grid",
           columns: 1,
-          items: [
-            "images/projects/nutrikids/style-guide.png"
-          ],
+          items: ["images/projects/nutrikids/style-guide.png"],
         },
       },
 
@@ -2613,7 +2613,7 @@ const PROJECTS = [
           items: [
             "images/projects/nutrikids/mockup-1.png",
             "images/projects/nutrikids/mockup-2.png",
-            "images/projects/nutrikids/mockup-3.png"
+            "images/projects/nutrikids/mockup-3.png",
           ],
         },
       },
@@ -2627,11 +2627,7 @@ const PROJECTS = [
     bg: "#FBF6D8",
     color: "#7c410b",
     image: "images/projects/exbook.png",
-    tags: [
-      "User Interface Design",
-      "Mobile App",
-      "Figma",
-    ],
+    tags: ["User Interface Design", "Mobile App", "Figma"],
     meta: [
       { label: "Type", value: "Mobile App" },
       { label: "Role", value: "UI/UX Designer" },
@@ -2677,11 +2673,7 @@ const PROJECTS = [
     bg: "#F1F1F1",
     color: "#57865E",
     image: "images/projects/qbit.png",
-    tags: [
-      "User Interface Design",
-      "Mobile App",
-      "Figma",
-    ],
+    tags: ["User Interface Design", "Mobile App", "Figma"],
     meta: [
       { label: "Type", value: "Mobile App" },
       { label: "Role", value: "UI/UX Designer" },
@@ -2726,7 +2718,7 @@ const PROJECTS = [
     name: "SKEGO",
     category: "dataml",
     bg: "#FBEEDD",
-    color: "#b75106",
+    color: "#854200",
     image: "images/projects/skego.png",
     tags: [
       "Machine Learning",
@@ -3368,7 +3360,7 @@ const PROJECTS = [
       },
     ],
   },
-  
+
   {
     id: "softdev-exbook",
     name: "ExBook",
@@ -4393,7 +4385,6 @@ const PROJECTS = [
     bg: "#DDEFFC",
     color: "#013A70",
     image: "images/projects/maroku.png",
-
     tags: [
       "Business Analysis",
       "Requirements Analysis",
@@ -4402,1081 +4393,788 @@ const PROJECTS = [
       "Problem Analysis",
       "Solution Analysis",
     ],
-
     meta: [
       { label: "Role", value: "Business Analyst" },
       { label: "Year", value: "2026" },
     ],
-
     detailIntro:
       "Business analysis of Maroku's existing ordering and operational processes, identifying stakeholder needs, process gaps, and opportunities for a more structured digital ordering system.",
-
     template: "business-maroku",
-
-    sections: [
+    links: [
       {
-        id: "overview",
-        label: "Overview",
-        kind: "desc",
-        body: `
-          <p>
-            This project analyzes the existing business processes at Maroku, a cake business operating with several types of orders and customer interactions. The analysis covers customer ordering, custom cake requests, big orders, cake decoration classes, stock management, payments, and internal order coordination.
-          </p>
-
-          <p>
-            The analysis was conducted as part of the Maroku UI/UX design project, with a focus on translating business and stakeholder problems into structured requirements and solution opportunities for a mobile application.
-          </p>
-        `,
+        type: "pdf",
+        label: "OPEN BRD",
+        url: "https://docs.google.com/document/d/1qo9_swAuDJs1G4MOJIns_P2VNobjtDNwrq5xE1onhI4/edit?usp=sharing",
       },
-
+    ],
+    sections: [
       {
         id: "business-context",
         label: "Business Context",
-        kind: "accordion",
+        kind: "desc",
         body: `
           <p>
-            Maroku operates several business processes, including same-day orders, H- orders, custom cakes, big orders, cake decoration classes, monthly bazaars, and collaborations with cafes or other UMKM businesses.
+            <strong>Business overview</strong> Maroku is a home-bakery UMKM (micro/small business) based in Pasuruan, East Java, Indonesia, operating since 2021. It started with dessert boxes and has since expanded into bento cakes, tarts, custom cakes, cookies, and other baked goods. Since 2024, Maroku also runs a monthly cake-decoration class and accepts large-volume ("big order") bookings for events, which can include on-site dessert corners and service staff.
           </p>
-
           <p>
-            For large orders, Maroku serves needs such as weddings, birthday parties, and corporate events. Corporate orders can include dessert corners and cake requirements for office events.
+            <strong>Existing operational context</strong> Maroku's day-to-day operations run almost entirely through manual, chat-based workflows:
           </p>
-
+          <ul>
+            <li>Orders are taken over WhatsApp and copied by hand into Google Keep.</li>
+            <li>Two separate admins handle "same-day" orders and "H-order" (pre-order) orders.</li>
+            <li>Stock is checked manually roughly every two hours.</li>
+            <li>Class registration runs through WhatsApp and a separate Google Form, with manual payment-proof verification.</li>
+            <li>Large/corporate orders start as a WhatsApp consultation, move to an in-store discussion, and are documented informally.</li>
+          </ul>
           <p>
-            The business currently uses WhatsApp for customer communication and Google Keep for recording orders so that the kitchen and admin teams can stay synchronized.
+            <strong>Project objective</strong> <em>Research Evidence:</em> The thesis' stated objective was to design a UI/UX solution using the Design Thinking method for a Maroku mobile application that fits user needs, and to produce a tested design blueprint Maroku could use as a foundation for future app development. <em>Business Analysis:</em> From a business standpoint, the underlying objective this research supports is: centralize order intake, catalog, class registration, and stock/sales visibility into one structured system, reducing manual admin work and miscommunication between customers and the store.
           </p>
         `,
-        items: [
-          {
-            label: "Same-Day Order",
-            body: `
-              <p>
-                Customers may contact Maroku through WhatsApp to check product availability before visiting the store, or they may come directly to the store and select available products. If the desired cake is unavailable, the store may offer an option to wait for production or have the product delivered.
-              </p>
-            `,
-          },
-
-          {
-            label: "H- Order",
-            body: `
-              <p>
-                H- orders involve customers discussing availability, date, price, and pickup time with the admin before submitting an order and making a down payment.
-              </p>
-            `,
-          },
-
-          {
-            label: "Custom Cake",
-            body: `
-              <p>
-                Custom cake orders require customers to communicate their design requirements. The current process can involve communication through WhatsApp, creating a risk of differences between the requested design and the final result.
-              </p>
-            `,
-          },
-
-          {
-            label: "Big Order",
-            body: `
-              <p>
-                Large orders for events require discussion of order requirements, followed by agreement and transaction processing. Corporate customers may begin the process through WhatsApp and continue discussions or dealing directly with the store.
-              </p>
-            `,
-          },
-
-          {
-            label: "Cake Decoration Class",
-            body: `
-              <p>
-                Class registration is currently handled manually through WhatsApp, including payment confirmation. Participants do not have direct visibility of remaining class capacity and must wait for confirmation from the admin.
-              </p>
-            `,
-          },
-        ],
       },
-
       {
-        id: "stakeholders",
-        label: "Stakeholder Analysis",
+        id: "business-problem",
+        label: "Business Problem",
         kind: "table",
-        columns: ["Stakeholder", "Role / Context", "Key Needs"],
-        rows: [
-          [
-            "Store Team",
-            "Manages orders, stock, payments, and customer communication.",
-            "Integrated order management, monitoring of orders, payments, stock, and sales.",
-          ],
-          [
-            "Daily Customers",
-            "Individual customers ordering cakes for personal needs.",
-            "Fast and clear access to product, price, stock, date availability, and ordering information.",
-          ],
-          [
-            "Class Participants",
-            "Customers participating in Maroku's cake decoration classes.",
-            "Clear class information, available quota, registration, payment, and registration status.",
-          ],
-          [
-            "Corporate Customers",
-            "Customers ordering cakes in larger quantities for events.",
-            "Accessible catalog information and transparent order progress.",
-          ],
-          [
-            "Kitchen",
-            "Processes customer orders based on information provided by the team.",
-            "Accurate and centralized order information to reduce communication errors.",
-          ],
-          [
-            "Cashier",
-            "Handles sales transactions at the store.",
-            "Better recording and monitoring of products sold and payment integration.",
-          ],
-          [
-            "Owner",
-            "Oversees business operations and sales performance.",
-            "Centralized information and visibility into sales and business activity.",
-          ],
-        ],
-      },
-
-      {
-        id: "current-process",
-        label: "Current Process Analysis",
-        kind: "accordion",
         body: `
           <p>
-            The current-state analysis shows that several business activities depend on manual communication and recording. Customer orders are communicated through WhatsApp and subsequently copied by the admin into Google Keep.
+            Problem statement Maroku's order and information workflows are unstructured and entirely manual. Order details (dates, design requests, order changes) are frequently lost or miscommunicated between the WhatsApp/Google Keep intake process and the kitchen team. Customers lack visibility into product availability, date/class quotas, and order status, which creates uncertainty and repeated back-and-forth with admins.
           </p>
-
           <p>
-            This creates dependency on manual input and can result in missing information, unclear order details, and communication gaps between the admin and kitchen team.
+            Evidence / research basis (Research Evidence) Findings are drawn from semi-structured interviews conducted with 5 Maroku customers (spanning daily customers, class participants, and corporate/big-order customers) and 1 Maroku team representative, synthesized into empathy maps and an affinity diagram across 8 problem clusters:
+          </p>
+          <ol>
+            <li>Catalog & Product Information</li>
+            <li>Ordering & Order Flow</li>
+            <li>Date Slots, Stock & Availability</li>
+            <li>Custom Cake & Design</li>
+            <li>Admin Response & Communication</li>
+            <li>Notifications & Order Status</li>
+            <li>Cake Decoration Class</li>
+            <li>Cashier, Payment & Integration</li>
+          </ol>
+          <p>
+            Limitations of the existing process (Research Evidence, synthesized)
           </p>
         `,
-        items: [
-          {
-            label: "Order Recording",
-            body: `
-              <p>
-                Customers submit order information through WhatsApp, after which the admin manually transfers the information into Google Keep. Important information such as dates, designs, and changes to order details may not always be communicated clearly.
-              </p>
-            `,
-          },
-
-          {
-            label: "Customer Communication",
-            body: `
-              <p>
-                Customers depend on the admin to obtain information about product availability, prices, available dates, order progress, and other ordering details. The use of WhatsApp as the primary communication channel creates dependency on admin responses.
-              </p>
-            `,
-          },
-
-          {
-            label: "Stock & Sales Monitoring",
-            body: `
-              <p>
-                Stock between the kitchen and store can be monitored directly because they are located in the same place. However, when many custom orders are being processed, kitchen capacity can affect the speed at which store stock is replenished.
-              </p>
-
-              <p>
-                The existing cashier system is not connected to product-sales monitoring, making daily sales recording and reporting less centralized.
-              </p>
-            `,
-          },
-
-          {
-            label: "Class Registration",
-            body: `
-              <p>
-                Class information is distributed through social media or WhatsApp. Participants register through a form provided by the admin, make payment, and confirm payment through WhatsApp. The remaining class quota is not directly visible to participants.
-              </p>
-            `,
-          },
-
-          {
-            label: "Corporate Orders",
-            body: `
-              <p>
-                Corporate customers generally begin by consulting through WhatsApp and may visit the store to finalize the order. The process creates dependency on the admin for catalog information and order progress.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "problem-analysis",
-        label: "Problem Analysis",
-        kind: "table",
-        columns: ["Business Area", "Current Problem", "Business Impact"],
+        columns: ["Area", "Limitation"],
         rows: [
           [
-            "Product Catalog",
-            "No centralized and easily accessible digital catalog.",
-            "Customers depend on admin responses for basic product and price information.",
+            "Order recording",
+            "Manual copy from WhatsApp to Google Keep; missed date-tags cause the kitchen team to misread orders",
           ],
           [
-            "Order Process",
-            "Ordering is not centralized and relies on manual WhatsApp communication.",
-            "Process becomes slower and more dependent on admin involvement.",
+            "Communication",
+            "Two separate WhatsApp admin numbers (same-day / pre-order) increase coordination overhead",
           ],
           [
-            "Order Recording",
-            "Admin manually copies order information into Google Keep.",
-            "Creates potential for recording errors and communication gaps.",
+            "Product info",
+            "No digital catalog; customers depend on admins to repeatedly explain products, prices, and availability",
           ],
           [
-            "Stock & Availability",
-            "Customers cannot directly see stock, available dates, or remaining class quota.",
-            "Customers have less certainty when deciding when and what to order.",
+            "Custom cake",
+            "No structured design-brief process; final results sometimes don't match customer references",
           ],
           [
-            "Custom Cake",
-            "Design requirements are communicated without a dedicated structured interface.",
-            "Creates potential mismatch between requested design and final result.",
+            "Class registration",
+            "Two-step process (WhatsApp + Google Form); no visibility into remaining quota",
           ],
           [
-            "Order Progress",
-            "Customers do not have a dedicated interface for monitoring order status.",
-            "Customers need to contact the admin for progress information.",
-          ],
-          [
-            "Class Registration",
-            "Registration and payment confirmation are handled manually through WhatsApp.",
-            "Participants must wait for admin confirmation and cannot directly monitor remaining quota.",
-          ],
-          [
-            "Sales Monitoring",
-            "Cashier information is not connected to monitoring of products sold in-store.",
-            "Sales recording and reporting are less centralized.",
+            "Stock/sales",
+            "Manual stock checks; no unified view of in-store vs. online sales",
           ],
           [
             "Payment",
-            "Digital payment such as QRIS is not integrated with the existing cashier process.",
-            "The purchasing and payment process is less integrated.",
+            "No integrated digital payment (e.g., QRIS) tied to the cashier system",
+          ],
+          [
+            "Order status",
+            "No way for customers to track progress without contacting admins directly",
           ],
         ],
       },
-
-      {
-        id: "requirements",
-        label: "Business Requirements",
-        kind: "accordion",
-        body: `
-          <p>
-            The identified business requirements were derived from the problems found through stakeholder interviews and the subsequent affinity analysis.
-          </p>
-        `,
-        items: [
-          {
-            label: "Centralized Product Information",
-            body: `
-              <p>
-                Provide a structured digital catalog containing product photos, prices, and cake details, with filtering based on price and ingredients.
-              </p>
-            `,
-          },
-
-          {
-            label: "Structured Order Management",
-            body: `
-              <p>
-                Provide a structured ordering flow so that customer order information can be recorded more systematically and reduce repetitive inquiries and manual recording by admins.
-              </p>
-            `,
-          },
-
-          {
-            label: "Availability Management",
-            body: `
-              <p>
-                Provide clear information about product availability, order dates, and remaining class capacity to support customer decision-making and help the store manage production and sales.
-              </p>
-            `,
-          },
-
-          {
-            label: "Custom Order Management",
-            body: `
-              <p>
-                Provide a structured custom cake order form containing design details, colors, reference images, and confirmation before production.
-              </p>
-            `,
-          },
-
-          {
-            label: "Order Status Visibility",
-            body: `
-              <p>
-                Provide customers with access to order status and progress information so they do not need to repeatedly contact the admin.
-              </p>
-            `,
-          },
-
-          {
-            label: "Class Registration",
-            body: `
-              <p>
-                Provide an integrated class registration process with class information, available quota, and digital payment support.
-              </p>
-            `,
-          },
-
-          {
-            label: "Sales & Operational Monitoring",
-            body: `
-              <p>
-                Support the store in monitoring orders, stock, payments, and sales through a more integrated system.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "solution-analysis",
-        label: "Solution Analysis",
-        kind: "table",
-        columns: ["Problem Area", "Proposed Solution"],
-        rows: [
-          [
-            "Catalog & Product Information",
-            "Interactive e-catalog with product photos, prices, cake details, and filters based on price and ingredients.",
-          ],
-          [
-            "Ordering & Order Flow",
-            "Structured and informative ordering flow with automatic order recording.",
-          ],
-          [
-            "Date Slots, Stock & Availability",
-            "Visual availability information for products, order dates, and remaining class quota.",
-          ],
-          [
-            "Custom Cake & Design",
-            "Structured custom cake form containing design details, colors, reference images, and confirmation.",
-          ],
-          [
-            "Admin Response & Communication",
-            "Self-service access to catalog, order status, and schedule information to reduce unnecessary dependency on admin responses.",
-          ],
-          [
-            "Notifications & Order Status",
-            "Clear order-status information and notifications to support customer monitoring.",
-          ],
-          [
-            "Cake Decoration Class",
-            "Integrated class registration with schedule and quota information and digital payment support.",
-          ],
-          [
-            "Cashier, Payment & Integration",
-            "Integration of cashier, payment, and operational information to support more centralized business data.",
-          ],
-        ],
-      },
-
-      {
-        id: "business-flow",
-        label: "Business Process Mapping",
-        kind: "accordion",
-        body: `
-          <p>
-            The business analysis identified several customer and internal operational flows that need to be represented in the proposed application.
-          </p>
-        `,
-        items: [
-          {
-            label: "Customer Ordering",
-            body: `
-              <p>
-                The proposed customer ordering process covers product selection, product details, cart review, pickup or delivery selection, payment, and order confirmation.
-              </p>
-            `,
-          },
-
-          {
-            label: "Custom Cake",
-            body: `
-              <p>
-                The custom cake process begins with selecting the custom cake service, specifying the required date, completing the custom order details, submitting the request, and waiting for admin price determination before proceeding to payment.
-              </p>
-            `,
-          },
-
-          {
-            label: "Big Order",
-            body: `
-              <p>
-                The big order process supports two service options: Big Order Delivery and Big Order Serve on Site. Customers discuss their requirements with the admin, review the resulting invoice, and proceed to payment after reaching an agreement.
-              </p>
-            `,
-          },
-
-          {
-            label: "Class Registration",
-            body: `
-              <p>
-                Customers can select an available class, review class details, choose the ticket quantity, select a payment method, and complete the transaction before accessing the e-ticket.
-              </p>
-            `,
-          },
-
-          {
-            label: "Internal Operations",
-            body: `
-              <p>
-                The proposed information architecture separates operational needs across several roles, including Admin, Kitchen, Cashier, and Owner. These roles are associated with order management, order processing, cashier activities, and reporting.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "business-value",
-        label: "Business Value",
-        kind: "desc",
-        body: `
-          <p>
-            From a business-analysis perspective, the proposed application addresses the main operational gaps by centralizing product and order information, reducing reliance on manual communication, improving visibility of order status and availability, and supporting more structured coordination between customers and the Maroku team.
-          </p>
-
-          <p>
-            The proposal also identifies the potential for an e-catalog, cashier integration, digital payment such as QRIS, and centralized order tracking to support Maroku's future business operations.
-          </p>
-        `,
-      },
+      // {
+      //   id: "stakeholder-analysis",
+      //   label: "Stakeholder Analysis",
+      //   kind: "table",
+      //   columns: ["Stakeholder", "Role", "Needs / Responsibilities"],
+      //   rows: [
+      //     [
+      //       "Daily Customer",
+      //       "Individual buyer purchasing for personal needs (everyday cakes, birthdays, gifts)",
+      //       "Fast, clear ordering with visible pricing, stock, and available date slots",
+      //     ],
+      //     [
+      //       "Cake Decoration Class Participant",
+      //       "Attendee registering for Maroku's monthly class",
+      //       "Transparent, real-time class quota visibility and registration confirmation",
+      //     ],
+      //     [
+      //       "Corporate / Big-Order Customer",
+      //       "Buyer ordering in bulk for events, sometimes with on-site service",
+      //       "Access to a full catalog/package list and clear progress updates without needing to visit the store",
+      //     ],
+      //     [
+      //       "Maroku Team Representative",
+      //       "Internal operations contact for the store",
+      //       "Integrated, automated order handling; easier stock and sales monitoring",
+      //     ],
+      //   ],
+      //   body: `
+      //     <p>
+            
+      //     </p>
+      //     <p>
+      //       Internal role breakdown: During the design phase, the thesis further segments the store side into four functional roles Admin, Kitchen, Cashier, and Owner each with distinct information architecture and responsibilities (order handling, production, in-store transactions, and reporting, respectively). Only one store (owner) representative was directly interviewed; the four-role structure reflects how the solution was designed to support store operations, not four separately interviewed stakeholders. This distinction is flagged here to avoid overstating the primary research.
+      //     </p>
+      //   `,
+      // },
+      // {
+      //   id: "as-is-process",
+      //   label: "As-Is Process",
+      //   kind: "desc",
+      //   body: `
+      //     <p>
+            
+      //     </p>
+      //   `,
+      // },
     ],
   },
-  {
-    id: "business-sumul",
-    name: "Supply Chain Process Analysis",
-    category: "business",
-    bg: "#F9F4ED",
-    color: "#8B6243",
-    image: "images/projects/sumul.png",
 
-    tags: [
-      "Business Process Analysis",
-      "Supply Chain",
-      "Process Mapping",
-      "Problem Analysis",
-      "Solution Analysis",
-      "System Design",
-    ],
+  //
+  //
+  //
+  // {
+  //   id: "business-sumul",
+  //   name: "Supply Chain Process Analysis",
+  //   category: "business",
+  //   bg: "#F9F4ED",
+  //   color: "#8B6243",
+  //   image: "images/projects/sumul.png",
 
-    meta: [
-      { label: "Role", value: "Business Analyst" },
-      { label: "Year", value: "2025" },
-    ],
+  //   tags: [
+  //     "Business Process Analysis",
+  //     "Supply Chain",
+  //     "Process Mapping",
+  //     "Problem Analysis",
+  //     "Solution Analysis",
+  //     "System Design",
+  //   ],
 
-    detailIntro:
-      "An analysis of Tempe Cak Mul's supply chain processes, identifying operational gaps and translating them into structured process improvements and a proposed integrated system.",
+  //   meta: [
+  //     { label: "Role", value: "Business Analyst" },
+  //     { label: "Year", value: "2025" },
+  //   ],
 
-    template: "business-default",
+  //   detailIntro:
+  //     "An analysis of Tempe Cak Mul's supply chain processes, identifying operational gaps and translating them into structured process improvements and a proposed integrated system.",
 
-    sections: [
-      {
-        id: "overview",
-        label: "Overview",
-        kind: "desc",
-        body: `
-          <p>
-            This project analyzes the supply chain process of Tempe Cak Mul, a food production business in Sidoarjo, East Java. The analysis covers the flow of raw materials, production, distribution, and sales, with the objective of identifying key process challenges and opportunities for improvement.
-          </p>
+  //   template: "business-default",
 
-          <p>
-            The analysis was then translated into the proposed <strong>SUMUL (Supply Chain Tempe Cak Mul)</strong> system, which is designed to manage and monitor the supply chain from raw material procurement through finished-product distribution.
-          </p>
-        `,
-      },
+  //   sections: [
+  //     {
+  //       id: "overview",
+  //       label: "Overview",
+  //       kind: "desc",
+  //       body: `
+  //         <p>
+  //           This project analyzes the supply chain process of Tempe Cak Mul, a food production business in Sidoarjo, East Java. The analysis covers the flow of raw materials, production, distribution, and sales, with the objective of identifying key process challenges and opportunities for improvement.
+  //         </p>
 
-      {
-        id: "business-context",
-        label: "Business Context",
-        kind: "accordion",
-        body: `
-          <p>
-            Tempe Cak Mul is a micro-scale food business established in 2001 and managed independently by the owner and family members. The business produces fresh tempe for traditional markets and also supplies local shops and resellers.
-          </p>
+  //         <p>
+  //           The analysis was then translated into the proposed <strong>SUMUL (Supply Chain Tempe Cak Mul)</strong> system, which is designed to manage and monitor the supply chain from raw material procurement through finished-product distribution.
+  //         </p>
+  //       `,
+  //     },
 
-          <p>
-            Its supply chain involves raw material procurement, production, distribution to direct customers and resellers, and sales monitoring.
-          </p>
-        `,
-        items: [
-          {
-            label: "Raw Material",
-            body: `
-              <p>
-                Soybeans are the main raw material, with supply obtained through local suppliers. The report identifies soybean procurement as an important part of maintaining production continuity.
-              </p>
-            `,
-          },
-          {
-            label: "Production",
-            body: `
-              <p>
-                Tempe is produced daily and then distributed to traditional markets, shops, and local resellers.
-              </p>
-            `,
-          },
-          {
-            label: "Distribution",
-            body: `
-              <p>
-                Distribution is carried out at a medium scale, with resellers purchasing tempe for resale or further processing. Distribution records can therefore provide information about sales and the development of the business's reseller network.
-              </p>
-            `,
-          },
-        ],
-      },
+  //     {
+  //       id: "business-context",
+  //       label: "Business Context",
+  //       kind: "accordion",
+  //       body: `
+  //         <p>
+  //           Tempe Cak Mul is a micro-scale food business established in 2001 and managed independently by the owner and family members. The business produces fresh tempe for traditional markets and also supplies local shops and resellers.
+  //         </p>
 
-      {
-        id: "supply-chain",
-        label: "Supply Chain Mapping",
-        kind: "table",
-        columns: ["Stage", "Current Process", "Key Issue"],
-        rows: [
-          [
-            "Supplier Management",
-            "The relationship with soybean suppliers is managed informally.",
-            "No written cooperation agreement and limited transaction transparency.",
-          ],
-          [
-            "Raw Material Ordering",
-            "Raw materials are ordered manually, such as through telephone communication.",
-            "No structured order history or recorded material requirements.",
-          ],
-          [
-            "Raw Material Delivery",
-            "Delivery depends on supplier arrival without a regular schedule.",
-            "Delivery uncertainty can affect production continuity.",
-          ],
-          [
-            "Verification & Receiving",
-            "Received materials are not supported by a formal quality-checking procedure.",
-            "Quality and quantity verification are not systematically documented.",
-          ],
-          [
-            "Production",
-            "Production activities are carried out and recorded as part of the business process.",
-            "Production and material usage need structured documentation.",
-          ],
-          [
-            "Distribution",
-            "Tempe is distributed to markets, shops, and resellers.",
-            "Distribution is not sufficiently measured, creating potential waste and uncertainty.",
-          ],
-          [
-            "Sales Reporting",
-            "Sales information needs to be monitored to understand business performance.",
-            "Historical sales data needs to be organized for analysis and planning.",
-          ],
-        ],
-      },
+  //         <p>
+  //           Its supply chain involves raw material procurement, production, distribution to direct customers and resellers, and sales monitoring.
+  //         </p>
+  //       `,
+  //       items: [
+  //         {
+  //           label: "Raw Material",
+  //           body: `
+  //             <p>
+  //               Soybeans are the main raw material, with supply obtained through local suppliers. The report identifies soybean procurement as an important part of maintaining production continuity.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Production",
+  //           body: `
+  //             <p>
+  //               Tempe is produced daily and then distributed to traditional markets, shops, and local resellers.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Distribution",
+  //           body: `
+  //             <p>
+  //               Distribution is carried out at a medium scale, with resellers purchasing tempe for resale or further processing. Distribution records can therefore provide information about sales and the development of the business's reseller network.
+  //             </p>
+  //           `,
+  //         },
+  //       ],
+  //     },
 
-      {
-        id: "process-problems",
-        label: "Process Problem Analysis",
-        kind: "accordion",
-        body: `
-          <p>
-            The process analysis identified several issues across supplier management, procurement, delivery, receiving, inventory, distribution, and sales monitoring.
-          </p>
-        `,
-        items: [
-          {
-            label: "Supplier Relationship",
-            body: `
-              <p>
-                Supplier relationships are informal and do not have written cooperation agreements. This can create uncertainty in raw material supply and limited transparency in transactions.
-              </p>
-            `,
-          },
-          {
-            label: "Manual Procurement",
-            body: `
-              <p>
-                Raw material ordering is performed manually without a structured history of orders or material requirements, making future material planning more difficult.
-              </p>
-            `,
-          },
-          {
-            label: "Delivery Uncertainty",
-            body: `
-              <p>
-                Raw material deliveries are not recorded systematically and depend on supplier arrival. The lack of a regular delivery schedule can create delays that affect production.
-              </p>
-            `,
-          },
-          {
-            label: "Receiving Verification",
-            body: `
-              <p>
-                There is no formal procedure for checking the quality and quantity of incoming raw materials. The business relies on trust in suppliers, creating a risk if received materials do not meet expected standards.
-              </p>
-            `,
-          },
-          {
-            label: "Manual Stock Management",
-            body: `
-              <p>
-                Manual stock management can lead to recording errors and create risks of overstock or stock shortages. For perishable products such as tempe, excess stock can also result in waste.
-              </p>
-            `,
-          },
-          {
-            label: "Unmeasured Distribution",
-            body: `
-              <p>
-                Distribution that is not measured adequately can result in unsold tempe being given away or discarded, leading to lost revenue and uncertainty in inventory and cash-flow management.
-              </p>
-            `,
-          },
-          {
-            label: "Soybean Price Fluctuation",
-            body: `
-              <p>
-                Soybean prices can fluctuate due to external factors, particularly dependence on imported soybeans. Price increases can affect selling prices, consumer purchasing power, and producer profit margins.
-              </p>
-            `,
-          },
-        ],
-      },
+  //     {
+  //       id: "supply-chain",
+  //       label: "Supply Chain Mapping",
+  //       kind: "table",
+  //       columns: ["Stage", "Current Process", "Key Issue"],
+  //       rows: [
+  //         [
+  //           "Supplier Management",
+  //           "The relationship with soybean suppliers is managed informally.",
+  //           "No written cooperation agreement and limited transaction transparency.",
+  //         ],
+  //         [
+  //           "Raw Material Ordering",
+  //           "Raw materials are ordered manually, such as through telephone communication.",
+  //           "No structured order history or recorded material requirements.",
+  //         ],
+  //         [
+  //           "Raw Material Delivery",
+  //           "Delivery depends on supplier arrival without a regular schedule.",
+  //           "Delivery uncertainty can affect production continuity.",
+  //         ],
+  //         [
+  //           "Verification & Receiving",
+  //           "Received materials are not supported by a formal quality-checking procedure.",
+  //           "Quality and quantity verification are not systematically documented.",
+  //         ],
+  //         [
+  //           "Production",
+  //           "Production activities are carried out and recorded as part of the business process.",
+  //           "Production and material usage need structured documentation.",
+  //         ],
+  //         [
+  //           "Distribution",
+  //           "Tempe is distributed to markets, shops, and resellers.",
+  //           "Distribution is not sufficiently measured, creating potential waste and uncertainty.",
+  //         ],
+  //         [
+  //           "Sales Reporting",
+  //           "Sales information needs to be monitored to understand business performance.",
+  //           "Historical sales data needs to be organized for analysis and planning.",
+  //         ],
+  //       ],
+  //     },
 
-      {
-        id: "improvement-opportunities",
-        label: "Improvement Opportunities",
-        kind: "table",
-        columns: ["Process Area", "Proposed Improvement"],
-        rows: [
-          [
-            "Supplier Management",
-            "Record supplier information and manage ordering, payment, and order confirmation more systematically.",
-          ],
-          [
-            "Raw Material Ordering",
-            "Create structured records of raw material orders and requirements to support planning and maintain stock availability.",
-          ],
-          [
-            "Raw Material Delivery",
-            "Establish regular delivery schedules and record incoming raw material deliveries.",
-          ],
-          [
-            "Receiving",
-            "Use a verification checklist covering the quality and quantity of incoming raw materials.",
-          ],
-          [
-            "Stock Management",
-            "Use technology-based stock recording with notifications when inventory decreases and requires replenishment.",
-          ],
-          [
-            "Distribution",
-            "Analyze historical sales data to support more efficient daily distribution and reduce unsold products.",
-          ],
-          [
-            "Soybean Procurement",
-            "Consider long-term price agreements and alternative soybean suppliers to reduce the impact of price fluctuations.",
-          ],
-        ],
-      },
+  //     {
+  //       id: "process-problems",
+  //       label: "Process Problem Analysis",
+  //       kind: "accordion",
+  //       body: `
+  //         <p>
+  //           The process analysis identified several issues across supplier management, procurement, delivery, receiving, inventory, distribution, and sales monitoring.
+  //         </p>
+  //       `,
+  //       items: [
+  //         {
+  //           label: "Supplier Relationship",
+  //           body: `
+  //             <p>
+  //               Supplier relationships are informal and do not have written cooperation agreements. This can create uncertainty in raw material supply and limited transparency in transactions.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Manual Procurement",
+  //           body: `
+  //             <p>
+  //               Raw material ordering is performed manually without a structured history of orders or material requirements, making future material planning more difficult.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Delivery Uncertainty",
+  //           body: `
+  //             <p>
+  //               Raw material deliveries are not recorded systematically and depend on supplier arrival. The lack of a regular delivery schedule can create delays that affect production.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Receiving Verification",
+  //           body: `
+  //             <p>
+  //               There is no formal procedure for checking the quality and quantity of incoming raw materials. The business relies on trust in suppliers, creating a risk if received materials do not meet expected standards.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Manual Stock Management",
+  //           body: `
+  //             <p>
+  //               Manual stock management can lead to recording errors and create risks of overstock or stock shortages. For perishable products such as tempe, excess stock can also result in waste.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Unmeasured Distribution",
+  //           body: `
+  //             <p>
+  //               Distribution that is not measured adequately can result in unsold tempe being given away or discarded, leading to lost revenue and uncertainty in inventory and cash-flow management.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Soybean Price Fluctuation",
+  //           body: `
+  //             <p>
+  //               Soybean prices can fluctuate due to external factors, particularly dependence on imported soybeans. Price increases can affect selling prices, consumer purchasing power, and producer profit margins.
+  //             </p>
+  //           `,
+  //         },
+  //       ],
+  //     },
 
-      {
-        id: "system-analysis",
-        label: "Business-to-System Translation",
-        kind: "desc",
-        body: `
-          <p>
-            The identified business processes and improvement opportunities were translated into the proposed SUMUL system. The system is intended to manage, monitor, and improve the efficiency of Tempe Cak Mul's supply chain.
-          </p>
+  //     {
+  //       id: "improvement-opportunities",
+  //       label: "Improvement Opportunities",
+  //       kind: "table",
+  //       columns: ["Process Area", "Proposed Improvement"],
+  //       rows: [
+  //         [
+  //           "Supplier Management",
+  //           "Record supplier information and manage ordering, payment, and order confirmation more systematically.",
+  //         ],
+  //         [
+  //           "Raw Material Ordering",
+  //           "Create structured records of raw material orders and requirements to support planning and maintain stock availability.",
+  //         ],
+  //         [
+  //           "Raw Material Delivery",
+  //           "Establish regular delivery schedules and record incoming raw material deliveries.",
+  //         ],
+  //         [
+  //           "Receiving",
+  //           "Use a verification checklist covering the quality and quantity of incoming raw materials.",
+  //         ],
+  //         [
+  //           "Stock Management",
+  //           "Use technology-based stock recording with notifications when inventory decreases and requires replenishment.",
+  //         ],
+  //         [
+  //           "Distribution",
+  //           "Analyze historical sales data to support more efficient daily distribution and reduce unsold products.",
+  //         ],
+  //         [
+  //           "Soybean Procurement",
+  //           "Consider long-term price agreements and alternative soybean suppliers to reduce the impact of price fluctuations.",
+  //         ],
+  //       ],
+  //     },
 
-          <p>
-            The proposed system covers six main areas: <strong>Dashboard, Stok Bahan, Produksi, Distribusi, Laporan, and Pengaturan</strong>.
-          </p>
-        `,
-      },
+  //     {
+  //       id: "system-analysis",
+  //       label: "Business-to-System Translation",
+  //       kind: "desc",
+  //       body: `
+  //         <p>
+  //           The identified business processes and improvement opportunities were translated into the proposed SUMUL system. The system is intended to manage, monitor, and improve the efficiency of Tempe Cak Mul's supply chain.
+  //         </p>
 
-      {
-        id: "system-modules",
-        label: "System Modules",
-        kind: "table",
-        columns: ["Module", "Business Purpose"],
-        rows: [
-          [
-            "Dashboard",
-            "Monitor total sales, raw material stock, and finished-product stock.",
-          ],
-          [
-            "Stok Bahan",
-            "Manage raw material requirements and procurement records.",
-          ],
-          ["Produksi", "Record production quantities and raw material usage."],
-          ["Distribusi", "Record product sales and reseller transactions."],
-          ["Laporan", "Monitor and analyze sales performance by period."],
-          ["Pengaturan", "Manage user profile and account security."],
-        ],
-      },
+  //         <p>
+  //           The proposed system covers six main areas: <strong>Dashboard, Stok Bahan, Produksi, Distribusi, Laporan, and Pengaturan</strong>.
+  //         </p>
+  //       `,
+  //     },
 
-      {
-        id: "procurement-flow",
-        label: "Procurement & Payment Flow",
-        kind: "accordion",
-        body: `
-          <p>
-            The proposed procurement process structures the relationship between raw material ordering and supplier payment.
-          </p>
-        `,
-        items: [
-          {
-            label: "Raw Material Ordering",
-            body: `
-              <p>
-                The owner can input the required quantity of raw materials directly into the system. The order is then automatically sent to the supplier's email.
-              </p>
-            `,
-          },
-          {
-            label: "Payment",
-            body: `
-              <p>
-                A new raw material order cannot be submitted before the previous raw material payment has been completed. Supplier account information and previous order history are stored in the system to support this process.
-              </p>
-            `,
-          },
-          {
-            label: "Tracking",
-            body: `
-              <p>
-                After an order is submitted, the supplier receives an email containing the material request and an external link connected to SUMUL. The supplier confirms material availability and expected delivery, and the response becomes the basis for recording the transaction status.
-              </p>
-            `,
-          },
-        ],
-      },
+  //     {
+  //       id: "system-modules",
+  //       label: "System Modules",
+  //       kind: "table",
+  //       columns: ["Module", "Business Purpose"],
+  //       rows: [
+  //         [
+  //           "Dashboard",
+  //           "Monitor total sales, raw material stock, and finished-product stock.",
+  //         ],
+  //         [
+  //           "Stok Bahan",
+  //           "Manage raw material requirements and procurement records.",
+  //         ],
+  //         ["Produksi", "Record production quantities and raw material usage."],
+  //         ["Distribusi", "Record product sales and reseller transactions."],
+  //         ["Laporan", "Monitor and analyze sales performance by period."],
+  //         ["Pengaturan", "Manage user profile and account security."],
+  //       ],
+  //     },
 
-      {
-        id: "production-distribution",
-        label: "Production & Distribution Flow",
-        kind: "accordion",
-        body: `
-          <p>
-            SUMUL also structures production and distribution records so the business can maintain a clearer view of product movement.
-          </p>
-        `,
-        items: [
-          {
-            label: "Production",
-            body: `
-              <p>
-                Production records allow the factory to track the quantity of tempe produced in each production cycle and the amount of raw material used.
-              </p>
-            `,
-          },
-          {
-            label: "Distribution",
-            body: `
-              <p>
-                Distribution records include the buyer name, quantity of tempe sold, and total sales value. The information is stored as transaction history and can be used to observe sales development and identify key customers.
-              </p>
-            `,
-          },
-          {
-            label: "Sales Reporting",
-            body: `
-              <p>
-                The reporting module provides structured sales information by period, including transaction dates, quantity sold, and daily revenue. Historical sales data can support identification of sales patterns and business planning.
-              </p>
-            `,
-          },
-        ],
-      },
+  //     {
+  //       id: "procurement-flow",
+  //       label: "Procurement & Payment Flow",
+  //       kind: "accordion",
+  //       body: `
+  //         <p>
+  //           The proposed procurement process structures the relationship between raw material ordering and supplier payment.
+  //         </p>
+  //       `,
+  //       items: [
+  //         {
+  //           label: "Raw Material Ordering",
+  //           body: `
+  //             <p>
+  //               The owner can input the required quantity of raw materials directly into the system. The order is then automatically sent to the supplier's email.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Payment",
+  //           body: `
+  //             <p>
+  //               A new raw material order cannot be submitted before the previous raw material payment has been completed. Supplier account information and previous order history are stored in the system to support this process.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Tracking",
+  //           body: `
+  //             <p>
+  //               After an order is submitted, the supplier receives an email containing the material request and an external link connected to SUMUL. The supplier confirms material availability and expected delivery, and the response becomes the basis for recording the transaction status.
+  //             </p>
+  //           `,
+  //         },
+  //       ],
+  //     },
 
-      {
-        id: "business-impact",
-        label: "Business Impact",
-        kind: "desc",
-        body: `
-          <p>
-            From a business-analysis perspective, SUMUL addresses process gaps by replacing fragmented manual records with structured information across procurement, payment, delivery tracking, production, distribution, and sales reporting.
-          </p>
+  //     {
+  //       id: "production-distribution",
+  //       label: "Production & Distribution Flow",
+  //       kind: "accordion",
+  //       body: `
+  //         <p>
+  //           SUMUL also structures production and distribution records so the business can maintain a clearer view of product movement.
+  //         </p>
+  //       `,
+  //       items: [
+  //         {
+  //           label: "Production",
+  //           body: `
+  //             <p>
+  //               Production records allow the factory to track the quantity of tempe produced in each production cycle and the amount of raw material used.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Distribution",
+  //           body: `
+  //             <p>
+  //               Distribution records include the buyer name, quantity of tempe sold, and total sales value. The information is stored as transaction history and can be used to observe sales development and identify key customers.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Sales Reporting",
+  //           body: `
+  //             <p>
+  //               The reporting module provides structured sales information by period, including transaction dates, quantity sold, and daily revenue. Historical sales data can support identification of sales patterns and business planning.
+  //             </p>
+  //           `,
+  //         },
+  //       ],
+  //     },
 
-          <p>
-            The proposed process structure is intended to improve visibility of supply chain activities and provide organized data that can support operational monitoring and business decision-making.
-          </p>
-        `,
-      },
-    ],
-  },
-  {
-    id: "business-qbit",
-    name: "QBit",
-    category: "business",
-    bg: "#F1F1F1",
-    color: "#57865E",
-    image: "images/projects/qbit.png",
+  //     {
+  //       id: "business-impact",
+  //       label: "Business Impact",
+  //       kind: "desc",
+  //       body: `
+  //         <p>
+  //           From a business-analysis perspective, SUMUL addresses process gaps by replacing fragmented manual records with structured information across procurement, payment, delivery tracking, production, distribution, and sales reporting.
+  //         </p>
 
-    tags: [
-      "Business Analysis",
-      "Business Model Canvas",
-      "Market Analysis",
-      "Business Concept",
-      "Marketing Strategy",
-      "Business Feasibility",
-    ],
+  //         <p>
+  //           The proposed process structure is intended to improve visibility of supply chain activities and provide organized data that can support operational monitoring and business decision-making.
+  //         </p>
+  //       `,
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: "business-qbit",
+  //   name: "QBit",
+  //   category: "business",
+  //   bg: "#F1F1F1",
+  //   color: "#57865E",
+  //   image: "images/projects/qbit.png",
 
-    meta: [
-      { label: "Role", value: "Business Analyst" },
-      { label: "Year", value: "2022" },
-    ],
+  //   tags: [
+  //     "Business Analysis",
+  //     "Business Model Canvas",
+  //     "Market Analysis",
+  //     "Business Concept",
+  //     "Marketing Strategy",
+  //     "Business Feasibility",
+  //   ],
 
-    detailIntro:
-      "A business concept analysis for QBit, a proposed mobile solution supporting small-scale urban farming through consultation, land design, a seed marketplace, and plant monitoring.",
+  //   meta: [
+  //     { label: "Role", value: "Business Analyst" },
+  //     { label: "Year", value: "2022" },
+  //   ],
 
-    template: "business-default",
+  //   detailIntro:
+  //     "A business concept analysis for QBit, a proposed mobile solution supporting small-scale urban farming through consultation, land design, a seed marketplace, and plant monitoring.",
 
-    sections: [
-      {
-        id: "overview",
-        label: "Overview",
-        kind: "desc",
-        body: `
-          <p>
-            QBit is a proposed digital business concept developed to support small-scale urban farming. The concept combines consultation services, land design, a seed marketplace, and plant monitoring within a mobile application.
-          </p>
+  //   template: "business-default",
 
-          <p>
-            The business analysis covers the opportunity behind the concept, the problems it aims to address, its business model, marketing strategy, operational planning, and financial feasibility assumptions.
-          </p>
-        `,
-      },
+  //   sections: [
+  //     {
+  //       id: "overview",
+  //       label: "Overview",
+  //       kind: "desc",
+  //       body: `
+  //         <p>
+  //           QBit is a proposed digital business concept developed to support small-scale urban farming. The concept combines consultation services, land design, a seed marketplace, and plant monitoring within a mobile application.
+  //         </p>
 
-      {
-        id: "business-opportunity",
-        label: "Business Opportunity",
-        kind: "accordion",
-        body: `
-          <p>
-            The proposal identifies an opportunity based on the interest of Indonesian communities in small-scale cultivation, including the use of unused areas around homes for planting.
-          </p>
+  //         <p>
+  //           The business analysis covers the opportunity behind the concept, the problems it aims to address, its business model, marketing strategy, operational planning, and financial feasibility assumptions.
+  //         </p>
+  //       `,
+  //     },
 
-          <p>
-            The concept responds to differences in regional climate and conditions by proposing support for seed selection, planting media, plant care, and land layout for small cultivation areas.
-          </p>
-        `,
-        items: [
-          {
-            label: "Target Problem",
-            body: `
-              <ul>
-                <li>Choosing plants and cultivation materials should consider local climate and regional conditions.</li>
-                <li>Small-scale growers may have limited cultivation space.</li>
-                <li>Users need support in selecting suitable seeds and planting media.</li>
-                <li>Limited space requires appropriate land layout and design.</li>
-              </ul>
-            `,
-          },
-          {
-            label: "Proposed Value",
-            body: `
-              <p>
-                QBit is proposed to help users select suitable seeds and planting media, obtain cultivation consultation, and plan the layout of limited cultivation areas.
-              </p>
-            `,
-          },
-        ],
-      },
+  //     {
+  //       id: "business-opportunity",
+  //       label: "Business Opportunity",
+  //       kind: "accordion",
+  //       body: `
+  //         <p>
+  //           The proposal identifies an opportunity based on the interest of Indonesian communities in small-scale cultivation, including the use of unused areas around homes for planting.
+  //         </p>
 
-      {
-        id: "business-model",
-        label: "Business Model",
-        kind: "accordion",
-        body: `
-          <p>
-            The proposal includes a Business Model Canvas (BMC) as part of the foundation for the QBit business model. The BMC covers key business components such as customer segments, value propositions, channels, key activities, and revenue streams.
-          </p>
-        `,
-        items: [
-          {
-            label: "Business Model Canvas",
-            body: `
-              <p>
-                The BMC was developed to define the core elements of the proposed QBit business model and connect the application concept with its intended market and revenue model.
-              </p>
-            `,
-          },
-        ],
-      },
+  //         <p>
+  //           The concept responds to differences in regional climate and conditions by proposing support for seed selection, planting media, plant care, and land layout for small cultivation areas.
+  //         </p>
+  //       `,
+  //       items: [
+  //         {
+  //           label: "Target Problem",
+  //           body: `
+  //             <ul>
+  //               <li>Choosing plants and cultivation materials should consider local climate and regional conditions.</li>
+  //               <li>Small-scale growers may have limited cultivation space.</li>
+  //               <li>Users need support in selecting suitable seeds and planting media.</li>
+  //               <li>Limited space requires appropriate land layout and design.</li>
+  //             </ul>
+  //           `,
+  //         },
+  //         {
+  //           label: "Proposed Value",
+  //           body: `
+  //             <p>
+  //               QBit is proposed to help users select suitable seeds and planting media, obtain cultivation consultation, and plan the layout of limited cultivation areas.
+  //             </p>
+  //           `,
+  //         },
+  //       ],
+  //     },
 
-      {
-        id: "business-offering",
-        label: "Business Offering",
-        kind: "table",
-        columns: ["Offering", "Business Function"],
-        rows: [
-          [
-            "Consultation",
-            "Provides access to consultation related to plant cultivation.",
-          ],
-          [
-            "Land Design",
-            "Provides land layout and design support for small cultivation areas.",
-          ],
-          [
-            "Seed Marketplace",
-            "Supports the sale of plant seeds and cultivation-related products.",
-          ],
-          [
-            "Plant Monitoring",
-            "Supports users in monitoring and caring for cultivated plants.",
-          ],
-        ],
-      },
+  //     {
+  //       id: "business-model",
+  //       label: "Business Model",
+  //       kind: "accordion",
+  //       body: `
+  //         <p>
+  //           The proposal includes a Business Model Canvas (BMC) as part of the foundation for the QBit business model. The BMC covers key business components such as customer segments, value propositions, channels, key activities, and revenue streams.
+  //         </p>
+  //       `,
+  //       items: [
+  //         {
+  //           label: "Business Model Canvas",
+  //           body: `
+  //             <p>
+  //               The BMC was developed to define the core elements of the proposed QBit business model and connect the application concept with its intended market and revenue model.
+  //             </p>
+  //           `,
+  //         },
+  //       ],
+  //     },
 
-      {
-        id: "operations",
-        label: "Operational Analysis",
-        kind: "accordion",
-        body: `
-          <p>
-            The proposed business operation requires coordination with external parties to support the application and product ecosystem.
-          </p>
-        `,
-        items: [
-          {
-            label: "Suppliers",
-            body: `
-              <p>
-                The proposal plans to identify suppliers of seeds, fertilizers, and planting media that meet the required standards.
-              </p>
-            `,
-          },
-          {
-            label: "Professional Partners",
-            body: `
-              <p>
-                The proposal includes cooperation with professionals who understand soil and regional planting conditions, as well as land designers who can help maximize the use of small cultivation spaces.
-              </p>
-            `,
-          },
-          {
-            label: "Application Development",
-            body: `
-              <p>
-                The proposal planned to work with an application development service to build the application based on the prepared design and feature requirements.
-              </p>
-            `,
-          },
-        ],
-      },
+  //     {
+  //       id: "business-offering",
+  //       label: "Business Offering",
+  //       kind: "table",
+  //       columns: ["Offering", "Business Function"],
+  //       rows: [
+  //         [
+  //           "Consultation",
+  //           "Provides access to consultation related to plant cultivation.",
+  //         ],
+  //         [
+  //           "Land Design",
+  //           "Provides land layout and design support for small cultivation areas.",
+  //         ],
+  //         [
+  //           "Seed Marketplace",
+  //           "Supports the sale of plant seeds and cultivation-related products.",
+  //         ],
+  //         [
+  //           "Plant Monitoring",
+  //           "Supports users in monitoring and caring for cultivated plants.",
+  //         ],
+  //       ],
+  //     },
 
-      {
-        id: "marketing",
-        label: "Marketing Strategy",
-        kind: "accordion",
-        body: `
-          <p>
-            The proposed marketing strategy combines online and offline promotion.
-          </p>
-        `,
-        items: [
-          {
-            label: "Online Marketing",
-            body: `
-              <p>
-                Online promotion was planned through social media platforms including Facebook, Instagram, TikTok, and Twitter, using application-related promotional content and offers.
-              </p>
-            `,
-          },
-          {
-            label: "Offline Marketing",
-            body: `
-              <p>
-                Offline promotion was planned through participation in expos or exhibitions to introduce the business concept and attract potential customers.
-              </p>
-            `,
-          },
-        ],
-      },
+  //     {
+  //       id: "operations",
+  //       label: "Operational Analysis",
+  //       kind: "accordion",
+  //       body: `
+  //         <p>
+  //           The proposed business operation requires coordination with external parties to support the application and product ecosystem.
+  //         </p>
+  //       `,
+  //       items: [
+  //         {
+  //           label: "Suppliers",
+  //           body: `
+  //             <p>
+  //               The proposal plans to identify suppliers of seeds, fertilizers, and planting media that meet the required standards.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Professional Partners",
+  //           body: `
+  //             <p>
+  //               The proposal includes cooperation with professionals who understand soil and regional planting conditions, as well as land designers who can help maximize the use of small cultivation spaces.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Application Development",
+  //           body: `
+  //             <p>
+  //               The proposal planned to work with an application development service to build the application based on the prepared design and feature requirements.
+  //             </p>
+  //           `,
+  //         },
+  //       ],
+  //     },
 
-      {
-        id: "financial-feasibility",
-        label: "Financial Feasibility",
-        kind: "table",
-        columns: ["Metric", "Proposal Result"],
-        rows: [
-          ["B/C Ratio", "1.21"],
-          ["ROI", "20%"],
-          ["Payback Period", "Approximately 12 months and 4 days"],
-        ],
-      },
+  //     {
+  //       id: "marketing",
+  //       label: "Marketing Strategy",
+  //       kind: "accordion",
+  //       body: `
+  //         <p>
+  //           The proposed marketing strategy combines online and offline promotion.
+  //         </p>
+  //       `,
+  //       items: [
+  //         {
+  //           label: "Online Marketing",
+  //           body: `
+  //             <p>
+  //               Online promotion was planned through social media platforms including Facebook, Instagram, TikTok, and Twitter, using application-related promotional content and offers.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Offline Marketing",
+  //           body: `
+  //             <p>
+  //               Offline promotion was planned through participation in expos or exhibitions to introduce the business concept and attract potential customers.
+  //             </p>
+  //           `,
+  //         },
+  //       ],
+  //     },
 
-      {
-        id: "financial-assumptions",
-        label: "Financial Assumptions",
-        kind: "desc",
-        body: `
-          <p>
-            The proposal's feasibility analysis uses financial and time assumptions to evaluate whether the business could be continued. The proposal assumes 500 users in the first month with an application handling fee of Rp5,000.
-          </p>
+  //     {
+  //       id: "financial-feasibility",
+  //       label: "Financial Feasibility",
+  //       kind: "table",
+  //       columns: ["Metric", "Proposal Result"],
+  //       rows: [
+  //         ["B/C Ratio", "1.21"],
+  //         ["ROI", "20%"],
+  //         ["Payback Period", "Approximately 12 months and 4 days"],
+  //       ],
+  //     },
 
-          <p>
-            The proposed product pricing includes seeds at Rp5,000 per 20g, fertilizer at Rp8,000 per 500g, and planting media at Rp12,000 per piece.
-          </p>
+  //     {
+  //       id: "financial-assumptions",
+  //       label: "Financial Assumptions",
+  //       kind: "desc",
+  //       body: `
+  //         <p>
+  //           The proposal's feasibility analysis uses financial and time assumptions to evaluate whether the business could be continued. The proposal assumes 500 users in the first month with an application handling fee of Rp5,000.
+  //         </p>
 
-          <p>
-            Based on the proposal's calculations, the resulting B/C Ratio is 1.21, ROI is 20%, and the estimated payback period is approximately 12 months and 4 days.
-          </p>
-        `,
-      },
+  //         <p>
+  //           The proposed product pricing includes seeds at Rp5,000 per 20g, fertilizer at Rp8,000 per 500g, and planting media at Rp12,000 per piece.
+  //         </p>
 
-      {
-        id: "execution-plan",
-        label: "Execution Plan",
-        kind: "accordion",
-        body: `
-          <p>
-            The proposal divides the implementation into initial, core, and final stages.
-          </p>
-        `,
-        items: [
-          {
-            label: "Initial Stage",
-            body: `
-              <p>
-                The initial stage includes identifying suppliers, establishing cooperation with plant consultants and land designers, preparing the application logo and interface, planning application features, and planning the target marketing approach.
-              </p>
-            `,
-          },
-          {
-            label: "Core Stage",
-            body: `
-              <p>
-                The core stage focuses on application development and testing. The prepared logo, initial interface, and features are handed over to the application development service, followed by application development and testing.
-              </p>
-            `,
-          },
-          {
-            label: "Final Stage",
-            body: `
-              <p>
-                The final stage includes revisions and improvements based on testing findings, followed by promotional activities to introduce the application to the public.
-              </p>
-            `,
-          },
-        ],
-      },
+  //         <p>
+  //           Based on the proposal's calculations, the resulting B/C Ratio is 1.21, ROI is 20%, and the estimated payback period is approximately 12 months and 4 days.
+  //         </p>
+  //       `,
+  //     },
 
-      {
-        id: "contribution",
-        label: "Contribution",
-        kind: "desc",
-        body: `
-          <p>
-            According to the project team's task allocation, my contribution focused on preparing the proposal and report, marketing the application, maximizing promotional media, conducting a survey of application development services, designing the application and its features, developing the application, testing the application, and creating digital marketing materials.
-          </p>
-        `,
-      },
-    ],
-  },
+  //     {
+  //       id: "execution-plan",
+  //       label: "Execution Plan",
+  //       kind: "accordion",
+  //       body: `
+  //         <p>
+  //           The proposal divides the implementation into initial, core, and final stages.
+  //         </p>
+  //       `,
+  //       items: [
+  //         {
+  //           label: "Initial Stage",
+  //           body: `
+  //             <p>
+  //               The initial stage includes identifying suppliers, establishing cooperation with plant consultants and land designers, preparing the application logo and interface, planning application features, and planning the target marketing approach.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Core Stage",
+  //           body: `
+  //             <p>
+  //               The core stage focuses on application development and testing. The prepared logo, initial interface, and features are handed over to the application development service, followed by application development and testing.
+  //             </p>
+  //           `,
+  //         },
+  //         {
+  //           label: "Final Stage",
+  //           body: `
+  //             <p>
+  //               The final stage includes revisions and improvements based on testing findings, followed by promotional activities to introduce the application to the public.
+  //             </p>
+  //           `,
+  //         },
+  //       ],
+  //     },
+
+  //     {
+  //       id: "contribution",
+  //       label: "Contribution",
+  //       kind: "desc",
+  //       body: `
+  //         <p>
+  //           According to the project team's task allocation, my contribution focused on preparing the proposal and report, marketing the application, maximizing promotional media, conducting a survey of application development services, designing the application and its features, developing the application, testing the application, and creating digital marketing materials.
+  //         </p>
+  //       `,
+  //     },
+  //   ],
+  // },
 
   /* ---------------- DESIGN ---------------- */
   {
