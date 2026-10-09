@@ -423,6 +423,29 @@ function renderSection(section) {
           ${renderSectionMedia(section.media)}
         </section>`;
 
+    case "tech-stack":
+      return `
+        <section class="detail-section" id="${section.id}">
+          <h2 class="detail-section__title">${section.label.toUpperCase()}</h2>
+          <div class="tech-stack-list">
+            ${section.items
+              .map(
+                (item) => `
+                  <article class="tech-stack-item">
+                    <div class="tech-stack-item__logo">
+                      <img src="${item.logo}" alt="${item.title} logo" loading="lazy">
+                    </div>
+                    <div class="tech-stack-item__content">
+                      <h3 class="tech-stack-item__title">${item.title}</h3>
+                      <p class="tech-stack-item__description">${item.description}</p>
+                    </div>
+                  </article>
+                `,
+              )
+              .join("")}
+          </div>
+        </section>`;
+
     case "placeholder":
       return `
         <section class="detail-section" id="${section.id}">

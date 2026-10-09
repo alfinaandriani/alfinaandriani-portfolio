@@ -243,7 +243,21 @@ const EXPERIENCE = [
   },
 ];
 
+const INITIAL_CERTIFICATION_COUNT = 5;
+
 const CERTIFICATIONS = [
+  {
+    date: "2026",
+    title: "Business Analysis & Process Management",
+    org: "Coursera",
+    file: "aboutfiles/bapm-certificate.pdf",
+  },
+  {
+    date: "2026",
+    title: "Introduction to Business Analysis Using Spreadsheets: Basics",
+    org: "Coursera",
+    file: "aboutfiles/iba-certificate.pdf",
+  },
   {
     date: "2025",
     title: "Junior Web Programmer",
@@ -525,8 +539,8 @@ function renderAboutPage() {
   `,
   ).join("");
 
-  document.getElementById("certification-list").innerHTML = CERTIFICATIONS.map(
-    (c) => `
+  const certificationList = document.getElementById("certification-list");
+  const renderCertification = (c) => `
     <div class="timeline-item">
       <p class="timeline-item__date">${c.date}</p>
       <div class="timeline-item__detail">
@@ -535,8 +549,49 @@ function renderAboutPage() {
         ${actionButtons([{ label: "View Certificate", file: c.file }])}
       </div>
     </div>
-  `,
-  ).join("");
+  `;
+  const visibleCertifications = CERTIFICATIONS.slice(
+    0,
+    INITIAL_CERTIFICATION_COUNT,
+  );
+  const remainingCertifications = CERTIFICATIONS.slice(
+    INITIAL_CERTIFICATION_COUNT,
+  );
+
+  certificationList.innerHTML = visibleCertifications
+    .map(renderCertification)
+    .join("");
+
+  if (remainingCertifications.length) {
+    const extraCertifications = document.createElement("div");
+    extraCertifications.id = "certification-extra";
+    extraCertifications.className = "certification-extra";
+    extraCertifications.setAttribute("aria-hidden", "true");
+    extraCertifications.inert = true;
+    extraCertifications.innerHTML = `
+      <div class="certification-extra__inner">
+        ${remainingCertifications.map(renderCertification).join("")}
+      </div>
+    `;
+    certificationList.append(extraCertifications);
+
+    const toggleButton = document.createElement("button");
+    toggleButton.type = "button";
+    toggleButton.className = "btn btn--small certification-toggle";
+    toggleButton.setAttribute("aria-controls", extraCertifications.id);
+    toggleButton.setAttribute("aria-expanded", "false");
+    toggleButton.textContent = "VIEW MORE";
+    certificationList.after(toggleButton);
+
+    toggleButton.addEventListener("click", () => {
+      const expanded = toggleButton.getAttribute("aria-expanded") !== "true";
+      toggleButton.setAttribute("aria-expanded", String(expanded));
+      toggleButton.textContent = expanded ? "VIEW LESS" : "VIEW MORE";
+      extraCertifications.setAttribute("aria-hidden", String(!expanded));
+      extraCertifications.inert = !expanded;
+      extraCertifications.classList.toggle("is-expanded", expanded);
+    });
+  }
 
   document.getElementById("campus-activities-list").innerHTML =
     CAMPUSACTIVITIES.map(

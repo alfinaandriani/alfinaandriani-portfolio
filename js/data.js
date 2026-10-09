@@ -2718,7 +2718,7 @@ const PROJECTS = [
     name: "SKEGO",
     category: "dataml",
     bg: "#FBEEDD",
-    color: "#854200",
+    color: "#F98A07",
     image: "images/projects/skego.png",
     tags: [
       "Machine Learning",
@@ -2753,82 +2753,64 @@ const PROJECTS = [
         kind: "desc",
         body: `
           <p>
-            SKEGO is a mobile task management app that helps university students decide what to work on first. Instead of manually sorting a growing pile of assignments, organizational duties, and extracurricular commitments, SKEGO uses a machine learning model to automatically rank tasks by priority and recommend a schedule — reducing the daily "what should I do first?" decision fatigue that many students face.
+            SKEGO is a smart task management application developed to help university students manage multiple academic and extracurricular responsibilities more efficiently. The application integrates machine learning-based task prioritization and automated scheduling to recommend task priorities and organize work schedules, helping students decide what to focus on first, manage deadlines, and reduce the stress of unstructured workloads. The ML model is built using an Artificial Neural Network (ANN), trained on student task-management survey data, and optimized through hyperparameter tuning. Its predictions support SKEGO's goal of making task planning more structured, practical, and data-driven.
           </p>
-          <p>
-            The project was built by a 7-person cross-functional team covering Machine Learning, Cloud Computing, and Mobile Development, and reached 100% completion of its planned scope, including a working Android app, a deployed prediction API, and cloud infrastructure on Google Cloud Platform.
-          </p>
-        `,
-      },
-      {
-        id: "problem",
-        label: "Problem",
-        kind: "desc",
-        body: `
-          <p>
-            Many students juggle coursework, committee work, and extracurricular activities at the same time, which makes it hard to judge which task deserves attention first. This leads to procrastination, missed deadlines, and added stress — issues that existing tools like Google Calendar or TickTick address with scheduling and sync, but not with actual task prioritization.
-          </p>
-        `,
-      },
-      {
-        id: "ml-workflow",
-        label: "Machine Learning Workflow",
-        kind: "desc",
-        body: `
-          <p>
-            As part of the ML team, my work covered the full pipeline behind SKEGO's core feature - AI-based task prioritization:
-          </p>
-          <ul>
-            <li><strong>Data collection:</strong> Since no suitable open dataset existed for this use case, the team designed and ran a Google Forms survey to self-collect task data (task name, deadline, difficulty, estimated duration, category, and priority rating) directly from students, ensuring the data reflected real study/task patterns rather than a generic dataset.</li>
-            <li><strong>Data cleaning & feature engineering:</strong> Cleaned raw survey responses, standardized column formats, converted timestamps and deadlines into usable numeric features, engineered features such as <code>days_until_deadline</code>, <code>hour_of_day</code>, and <code>day_of_week</code>, and normalized inputs with MinMaxScaler.</li>
-            <li><strong>Model development:</strong> Built an artificial neural network in Keras to predict a task's priority score from features like deadline proximity, difficulty level, and duration.</li>
-            <li><strong>Hyperparameter tuning:</strong> Used KerasTuner (RandomSearch, 20 trials) to tune the network's neuron counts, dropout rates, and learning rate for better generalization.</li>
-            <li><strong>Deployment:</strong> Packaged the trained model as a REST API using Flask, deployed on Google Cloud Run, so the mobile app could request real-time priority predictions.</li>
-          </ul>
         `,
       },
       {
         id: "tech-stack",
-        label: "Approach & Tech Stack",
-        kind: "table",
-        columns: ["Area", "Tools/Techniques"],
-        rows: [
-          ["Language", "Python"],
-          ["Modeling", "TensorFlow / Keras (Artificial Neural Network)"],
-          ["Hyperparameter tuning", "KerasTuner (RandomSearch)"],
-          ["Data handling", "Pandas, scikit-learn (MinMaxScaler)"],
-          ["Data source", "Self-collected via Google Forms survey"],
-          ["Serving", "Flask REST API"],
-          ["Infrastructure", "Google Cloud Run"],
-          ["Testing", "	Postman (API endpoint testing)"],
+        label: "Tech Stack",
+        kind: "tech-stack",
+        items: [
+          {
+            title: "Python",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+            description:
+              "Programming language for data preprocessing, feature engineering, model development, and evaluation.",
+          },
+          {
+            title: "TensorFlow & Keras",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
+            description:
+              "Building and training an Artificial Neural Network (ANN) using layers such as Dense and Dropout.",
+          },
+          {
+            title: "pandas",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
+            description:
+              "Cleaning and transforming survey data, processing dates, and extracting features for model training.",
+          },
+          {
+            title: "Google Colab",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecolab/googlecolab-original.svg",
+            description:
+              "Cloud-based notebook environment for data processing, model development, and experiments.",
+          },
+          {
+            title: "KerasTuner",
+            logo: "https://keras.io/img/logo.png",
+            description:
+              "Hyperparameter optimization using RandomSearch to explore neuron counts, dropout rates, and learning rates.",
+          },
+          {
+            title: "MinMaxScaler",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
+            description:
+              "Normalizing numerical features before training and evaluating the model.",
+          },
+          {
+            title: "Google Cloud Run",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg",
+            description:
+              "Cloud deployment environment for the ML model, enabling the application to access model predictions through a service.",
+          },
+          {
+            title: "Flask REST API",
+            logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg",
+            description:
+              "Serving model predictions through an API for integration with the SKEGO application, as described in the project brief.",
+          },
         ],
-      },
-      {
-        id: "results",
-        label: "Results",
-        kind: "desc",
-        body: `
-          <p>
-            Based on the final reported evaluation:
-          </p>
-          <ul>
-            <li><strong>Test loss:</strong> 0.0714</li>
-            <li><strong>Mean Absolute Error (MAE):</strong> 0.2206</li>
-          </ul>
-          <p>
-            These metrics indicate the model's priority-score predictions stayed reasonably close to the target values on held-out data, supporting its use for ranking tasks in the app. As with any small, self-collected survey dataset, results are specific to the data gathered for this project and would benefit from a larger, more diverse dataset in a production setting.
-          </p>
-        `,
-      },
-      {
-        id: "outcome",
-        label: "Outcome",
-        kind: "desc",
-        body: `
-          <p>
-            The model was successfully integrated end-to-end: task data flows from the Android app → Cloud Computing API → ML prediction service → back to the app, which then displays students' tasks sorted by predicted priority. The full system — Android app (with APK), backend API, and ML model — was deployed and demoed as a complete working product.
-          </p>
-        `,
       },
       {
         id: "app-demo",
@@ -4521,7 +4503,7 @@ const PROJECTS = [
       //   ],
       //   body: `
       //     <p>
-            
+
       //     </p>
       //     <p>
       //       Internal role breakdown: During the design phase, the thesis further segments the store side into four functional roles Admin, Kitchen, Cashier, and Owner each with distinct information architecture and responsibilities (order handling, production, in-store transactions, and reporting, respectively). Only one store (owner) representative was directly interviewed; the four-role structure reflects how the solution was designed to support store operations, not four separately interviewed stakeholders. This distinction is flagged here to avoid overstating the primary research.
@@ -4534,7 +4516,7 @@ const PROJECTS = [
       //   kind: "desc",
       //   body: `
       //     <p>
-            
+
       //     </p>
       //   `,
       // },

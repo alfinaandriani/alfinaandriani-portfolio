@@ -113,9 +113,9 @@ function renderFooter() {
       <div class="site-footer__col">
         <p class="site-footer__col-title">About</p>
         <a href="about.html#skills">Skill</a>
-        <a href="about.html#experience">Experience</a>
         <a href="about.html#achievement">Achievement</a>
         <a href="about.html#education">Education</a>
+        <a href="about.html#experience">Experience</a>
         <a href="about.html#certification">Certification</a>
         <a href="about.html#campus-activities">Campus Activities</a>
       </div>
