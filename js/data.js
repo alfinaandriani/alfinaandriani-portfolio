@@ -3205,126 +3205,22 @@ const PROJECTS = [
         kind: "desc",
         body: `
           <p>
-            This project implements selected parts of the Maroku mobile application based on the final UI/UX prototype. The implementation was carried out using React Native as part of the <strong>Generate Design</strong> stage.
+            This project continues the Maroku UI/UX design project by translating selected screens from the finalized prototype into a runnable mobile front end using <strong>React Native</strong>. As part of the <strong>Generate Design</strong> stage, the implementation explores how the proposed designs can be realized in a mobile application.
           </p>
 
           <p>
-            The implementation focuses on translating the finalized interface into a runnable mobile application for the customer-side catalog ordering flow.
+            The implementation focuses on the customer-side catalog ordering flow, covering product browsing, order confirmation, payment, and order details. It demonstrates the front-end interface and screen flow.
           </p>
         `,
       },
 
       {
-        id: "implementation-scope",
-        label: "Implementation Scope",
-        kind: "accordion",
-        body: `
-          <p>
-            The React Native implementation covers six main customer-facing pages documented in the project report.
-          </p>
-        `,
-        items: [
-          {
-            label: "Customer Home",
-            body: `
-              <p>
-                The Customer Home page serves as the main entry point for the customer-side application interface.
-              </p>
-            `,
-          },
-          {
-            label: "Catalog",
-            body: `
-              <p>
-                The Catalog page displays the available cake products and represents the product browsing stage of the catalog ordering flow.
-              </p>
-            `,
-          },
-          {
-            label: "Product Detail",
-            body: `
-              <p>
-                The Product Detail page allows customers to view information about a selected catalog product before continuing with the order.
-              </p>
-            `,
-          },
-          {
-            label: "Order Confirmation",
-            body: `
-              <p>
-                The Order Confirmation page represents the confirmation stage before the customer proceeds to payment.
-              </p>
-            `,
-          },
-          {
-            label: "Payment",
-            body: `
-              <p>
-                The Payment page represents the payment stage of the catalog ordering flow.
-              </p>
-            `,
-          },
-          {
-            label: "Order Detail",
-            body: `
-              <p>
-                The Order Detail page provides information about the customer's order after the purchasing process.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "technology",
-        label: "Technology",
-        kind: "table",
-        columns: ["Technology", "Usage"],
-        rows: [
-          [
-            "React Native",
-            "Used to implement selected parts of the Maroku interface into the front end.",
-          ],
-        ],
-      },
-
-      {
-        id: "user-flow",
-        label: "Implemented Flow",
-        kind: "desc",
-        body: `
-          <p>
-            The implemented screens represent the catalog purchasing flow from browsing products to completing the transaction and viewing the order information.
-          </p>
-
-          <p>
-            The flow covers <strong>Customer Home → Catalog → Product Detail → Order Confirmation → Payment → Order Detail</strong>.
-          </p>
-        `,
-      },
-
-      {
-        id: "generate-design",
-        label: "Generate Design",
-        kind: "desc",
-        body: `
-          <p>
-            The Generate Design stage translated selected parts of the finalized UI/UX design into a front-end implementation using React Native.
-          </p>
-
-          <p>
-            The implementation was focused on realizing the designed customer-side catalog ordering flow through the six documented screens.
-          </p>
-        `,
-      },
-
-      {
-        id: "screens",
+        id: "implemented-screens",
         label: "Implemented Screens",
         kind: "desc",
         body: `
           <p>
-            The implemented interface consists of six main customer-side screens documented in the report: Customer Home, Catalog, Product Detail, Order Confirmation, Payment, and Order Detail.
+            Six customer-facing screens were implemented: Customer Home, Catalog, Product Detail, Order Confirmation, Payment, and Order Detail.
           </p>
         `,
         media: {
@@ -3339,6 +3235,19 @@ const PROJECTS = [
             "images/projects/maroku/order-detail.png",
           ],
         },
+      },
+
+      {
+        id: "technology",
+        label: "Technology",
+        kind: "table",
+        columns: ["Technology", "Usage"],
+        rows: [
+          [
+            "React Native",
+            "Used to implement the selected UI/UX designs as a mobile front-end interface.",
+          ],
+        ],
       },
     ],
   },
@@ -3381,169 +3290,62 @@ const PROJECTS = [
         kind: "desc",
         body: `
           <p>
-            ExBook is a mobile application for buying and selling used books online. The frontend was developed using Flutter and Dart, with the interface based on the application's UI design.
+            ExBook is a mobile application for buying and selling used books,
+            developed using <strong>Flutter and Dart</strong>. The project
+            implements the application interface and core customer flows,
+            including browsing books, searching for products, managing a wishlist,
+            viewing book details, and checkout.
           </p>
-
           <p>
-            The implementation connects the Flutter application with an API for retrieving book data and uses Provider for state management.
+            Book data is retrieved through a <strong>Node.js backend API</strong>,
+            while <strong>Provider</strong> is used for state management.
+            Order information and favorite-book data are also stored locally
+            using SharedPreferences.
           </p>
         `,
       },
-
       {
-        id: "technology",
-        label: "Technology",
-        kind: "accordion",
-        body: `
-          <p>
-            The frontend implementation uses the following technologies and tools documented in the project report:
-          </p>
-        `,
-        items: [
-          {
-            label: "Flutter & Dart",
-            body: `
-              <p>
-                Flutter was used to develop the mobile user interface, with Dart as the programming language.
-              </p>
-            `,
-          },
-          {
-            label: "Provider",
-            body: `
-              <p>
-                Provider was used for state management in the Flutter application. The implementation includes state management for wishlist data and updates the related widgets when wishlist data changes.
-              </p>
-            `,
-          },
-          {
-            label: "API Integration",
-            body: `
-              <p>
-                The application retrieves book data through an API. The Home and Search Results screens use asynchronous data retrieval and display loading and error states while processing the API response.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "implementation",
-        label: "Frontend Implementation",
-        kind: "accordion",
-        body: `
-          <p>
-            The frontend implementation translates the ExBook interface into functional Flutter screens and connects the relevant screens through the application's user flow.
-          </p>
-        `,
-        items: [
-          {
-            label: "Authentication",
-            body: `
-              <p>
-                The application includes Splash Screen, Login Screen, and Sign Up Screen. The Splash Screen appears when the application starts and then moves to the Login screen. Login validates the entered email and password, while Sign Up allows users to create an account.
-              </p>
-            `,
-          },
-
-          {
-            label: "Home & Search",
-            body: `
-              <p>
-                The Home screen provides bottom navigation for Home, Pesanan, Wishlist, and Profil. It displays available books in a grid and provides a text input for searching books.
-              </p>
-
-              <p>
-                Book data on the Home screen is retrieved from the API using FutureBuilder, with loading and error states handled during the request.
-              </p>
-
-              <p>
-                The Search Results screen updates the displayed book list based on the entered search query and provides navigation to the book detail screen when a book is selected.
-              </p>
-            `,
-          },
-
-          {
-            label: "Wishlist",
-            body: `
-              <p>
-                The wishlist functionality is managed using Provider. Users can add and remove books from the wishlist and check whether a book is already saved.
-              </p>
-
-              <p>
-                The Wishlist screen displays saved books in a two-column grid and provides visual indication of a book's wishlist status.
-              </p>
-            `,
-          },
-
-          {
-            label: "Book Details",
-            body: `
-              <p>
-                The Book Detail screen displays the book image, title, author, page count, publication date, condition, category, description, and price. A "Beli Sekarang" button directs the user to checkout.
-              </p>
-            `,
-          },
-
-          {
-            label: "Checkout",
-            body: `
-              <p>
-                The Checkout screen displays shipping information, the selected book, and payment details consisting of product subtotal, shipping subtotal, and total payment.
-              </p>
-
-              <p>
-                After the user selects the purchase action, the order data is stored locally using SharedPreferences and a confirmation dialog is displayed before navigating to the Orders screen.
-              </p>
-            `,
-          },
-
-          {
-            label: "Orders",
-            body: `
-              <p>
-                The Orders screen displays two tabs: "Pesanan" for active or unfinished orders and "Riwayat" for completed orders. Users can also open the order detail screen to view shipping information, ordered products, and payment details.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "data-flow",
-        label: "Data & State Flow",
+        id: "features",
+        label: "Implemented Features",
         kind: "desc",
         body: `
-          <p>
-            Book data is retrieved from the backend API and converted from JSON responses into Book objects for use within the Flutter application.
-          </p>
-
-          <p>
-            Provider manages application state for wishlist data. Changes to the wishlist trigger widget updates through ChangeNotifier and notifyListeners().
-          </p>
-
-          <p>
-            Order data is stored locally using SharedPreferences, allowing the Orders screen to load previously stored order information.
-          </p>
+          <ul>
+            <li><strong>Authentication UI</strong> — Login and registration screens.</li>
+            <li><strong>Book Discovery</strong> — Browse books and search by keyword.</li>
+            <li><strong>Book Details</strong> — View book information and proceed to checkout.</li>
+            <li><strong>Wishlist</strong> — Add or remove books from saved lists.</li>
+            <li><strong>Checkout & Orders</strong> — Review purchase details and view orders and order history.</li>
+            <li><strong>Profile</strong> — View user and team profile information.</li>
+          </ul>
         `,
       },
-
       {
-        id: "implementation-summary",
-        label: "Implementation Summary",
+        id: "technology",
+        label: "Tech Stack",
         kind: "table",
-        columns: ["Area", "Implementation"],
+        columns: ["Technology", "Usage"],
         rows: [
-          ["UI", "Flutter widgets implementing the ExBook mobile interface"],
-          ["Language", "Dart"],
-          ["State Management", "Provider / ChangeNotifier"],
-          ["Book Data", "API integration with asynchronous data retrieval"],
-          ["Local Order Storage", "SharedPreferences"],
-          ["Navigation", "Flutter Navigator between application screens"],
+          [
+            "Flutter & Dart",
+            "Developing the mobile application interface and features.",
+          ],
+          [
+            "Provider",
+            "Managing application state and wishlist updates.",
+          ],
+          [
+            "Node.js & REST API",
+            "Providing book data to the mobile application.",
+          ],
+          [
+            "SharedPreferences",
+            "Storing order information and favorite-book data locally.",
+          ],
         ],
       },
     ],
   },
+
   {
     id: "softdev-siteknik",
     name: "Siteknik",
@@ -3551,27 +3353,21 @@ const PROJECTS = [
     bg: "#DDEFFC",
     color: "#4DAAF5",
     image: "images/projects/siteknik.png",
-
     tags: [
       "Flutter",
       "Dart",
       "Mobile Development",
-      "UI Implementation",
       "Navigation",
-      "Local Data Modeling",
+      "Data Modeling",
     ],
-
     meta: [
       { label: "Framework", value: "Flutter" },
       { label: "Role", value: "Mobile Developer" },
       { label: "Year", value: "2024" },
     ],
-
     detailIntro:
-      "A Flutter-based mobile application developed as an information platform for the Faculty of Engineering at UPN Veteran Jawa Timur.",
-
+      "A mobile information platform for the Faculty of Engineering at UPN Veteran Jawa Timur, developed with Flutter as a Mobile Programming midterm project.",
     template: "softdev-default",
-
     links: [
       {
         type: "github",
@@ -3579,7 +3375,6 @@ const PROJECTS = [
         url: "https://github.com/alfinaandriani/UTS_SITEKNIK",
       },
     ],
-
     sections: [
       {
         id: "overview",
@@ -3587,179 +3382,61 @@ const PROJECTS = [
         kind: "desc",
         body: `
           <p>
-            Siteknik is a mobile application developed as an information platform for the Faculty of Engineering at UPN Veteran Jawa Timur. The application presents structured information about the faculty, its study programs, and developer profiles.
+            Siteknik is a <strong>Flutter-based mobile application</strong>
+            developed for a Mobile Programming midterm project. It adapts the
+            concept of a faculty profile website into a mobile application,
+            providing information about the Faculty of Engineering at
+            UPN Veteran Jawa Timur.
           </p>
-
           <p>
-            The project was developed using Flutter and focuses on implementing the application's interface, navigation, and structured data to make faculty information accessible through a mobile application.
+            The application presents faculty information, including its history,
+            vision and mission, and study programs. Users can explore program
+            details such as accreditation, lecturers, and student achievements,
+            as well as view developer profiles.
           </p>
         `,
       },
-
       {
-        id: "purpose",
-        label: "Project Purpose",
+        id: "features",
+        label: "Implemented Features",
         kind: "desc",
         body: `
-          <p>
-            The project aims to provide an attractive and informative platform that allows users to easily access information about the Faculty of Engineering, including its history, vision and mission, and available study programs.
-          </p>
-
-          <p>
-            The application also provides detailed information for each study program, including its description, accreditation, vision and mission, teaching staff, and student achievements.
-          </p>
+          <ul>
+            <li><strong>Faculty Information</strong> — View the faculty's history, vision, and mission.</li>
+            <li><strong>Study Programs</strong> — Browse available programs and their accreditation information.</li>
+            <li><strong>Program Details</strong> — Explore program descriptions, vision and mission, lecturers, and student achievements.</li>
+            <li><strong>Developer Profiles</strong> — View developer information, education, and achievements.</li>
+            <li><strong>Navigation</strong> — Move between the main page and detailed information screens.</li>
+          </ul>
         `,
       },
-
       {
         id: "technology",
-        label: "Technology",
+        label: "Tech Stack",
         kind: "table",
         columns: ["Technology", "Usage"],
         rows: [
           [
-            "Flutter",
-            "Used as the main framework for developing the mobile application and building its user interface.",
+            "Flutter & Dart",
+            "Building the mobile application and its interface.",
           ],
           [
-            "Dart",
-            "Used as the programming language for implementing the application.",
+            "Flutter Widgets",
+            "Structuring layouts and displaying information in reusable components.",
           ],
-          ["Visual Studio Code", "Used as the development environment."],
           [
-            "Chrome",
-            "Used as part of the development and testing environment.",
+            "Data Models",
+            "Organizing study program and developer profile information.",
+          ],
+          [
+            "Navigation",
+            "Connecting the main screen with study program and profile details.",
           ],
         ],
-      },
-
-      {
-        id: "implementation",
-        label: "Implementation",
-        kind: "accordion",
-        body: `
-          <p>
-            The application was structured into several pages and data classes to organize the faculty information and its presentation in the mobile interface.
-          </p>
-        `,
-        items: [
-          {
-            label: "Main Page",
-            body: `
-              <p>
-                The main page presents general information about the Faculty of Engineering, including its history, vision, mission, study programs, and developer profiles.
-              </p>
-            `,
-          },
-          {
-            label: "Study Program",
-            body: `
-              <p>
-                The <strong>Prodi</strong> class defines the data structure for study programs, including the program name, logo, description, vision and mission, accreditation, head of study program, lecturers, website, and student achievements.
-              </p>
-            `,
-          },
-          {
-            label: "Study Program Detail",
-            body: `
-              <p>
-                The <strong>DetailProdi</strong> page displays detailed information for a selected study program. Users can also access the official study program website through the provided button.
-              </p>
-            `,
-          },
-          {
-            label: "Developer Profile",
-            body: `
-              <p>
-                The <strong>Profile</strong> class stores developer profile information, including name, photo, NPM, place and date of birth, address, phone number, email, GitHub account, education history, awards, and award photos.
-              </p>
-            `,
-          },
-          {
-            label: "Developer Profile Detail",
-            body: `
-              <p>
-                The <strong>DetailProfile</strong> page presents detailed developer information and provides interactions for opening GitHub and sending an email.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "navigation",
-        label: "Navigation & Interaction",
-        kind: "desc",
-        body: `
-          <p>
-            Navigation was implemented to allow users to access additional information about each study program and return to the main page. The study program detail page also provides access to the official study program website.
-          </p>
-
-          <p>
-            The developer profile detail page includes actions for opening a GitHub profile and sending an email.
-          </p>
-        `,
-      },
-
-      {
-        id: "data-structure",
-        label: "Data Structure",
-        kind: "desc",
-        body: `
-          <p>
-            The application uses structured classes to organize the information displayed in the interface. The <strong>Prodi</strong> class manages study program data, while the <strong>Profile</strong> class manages developer profile data. Both classes contain sample data initialized through their respective constructors.
-          </p>
-        `,
-      },
-
-      {
-        id: "flutter-concepts",
-        label: "Flutter Implementation",
-        kind: "table",
-        columns: ["Concept", "Implementation"],
-        rows: [
-          [
-            "Widget",
-            "Used as the fundamental building blocks of the application's user interface.",
-          ],
-          [
-            "Widget Tree",
-            "Used to structure the hierarchy and relationships between UI components.",
-          ],
-          [
-            "State",
-            "Flutter state concepts were applied through stateless and stateful widgets.",
-          ],
-          [
-            "Layout",
-            "Widgets such as Column, Row, ListView, ListTile, and Card were used to organize interface content.",
-          ],
-        ],
-      },
-
-      {
-        id: "screens",
-        label: "Application Screens",
-        kind: "desc",
-        body: `
-          <p>
-            The implemented application includes a main faculty information page, study program listing and detail pages, and developer profile listing and detail pages.
-          </p>
-        `,
-        media: {
-          layout: "grid",
-          columns: 1,
-          items: [
-            "images/projects/siteknik/main.png",
-            "images/projects/siteknik/prodi.png",
-            "images/projects/siteknik/detail-prodi.png",
-            "images/projects/siteknik/profile.png",
-            "images/projects/siteknik/detail-profile.png",
-          ],
-        },
       },
     ],
   },
+
   {
     id: "softdev-sis",
     name: "Stunting Information System",
@@ -3834,74 +3511,6 @@ const PROJECTS = [
           ],
           ["MySQL", "Used to store and manage application data."],
         ],
-      },
-
-      {
-        id: "development",
-        label: "Web Development",
-        kind: "accordion",
-        body: `
-          <p>
-            The project combines frontend technologies with PHP and MySQL to create a web-based information system. The frontend layer handles the structure, styling, and user interaction, while PHP is used to process application requests and connect the system with stored data.
-          </p>
-        `,
-        items: [
-          {
-            label: "Interface",
-            body: `
-              <p>
-                HTML and CSS were used to build and style the web interface, while JavaScript was used to support interactive elements within the application.
-              </p>
-            `,
-          },
-          {
-            label: "Application Logic",
-            body: `
-              <p>
-                PHP was used as the server-side programming language to process application functionality and handle communication between the web application and the database.
-              </p>
-            `,
-          },
-          {
-            label: "Database",
-            body: `
-              <p>
-                MySQL was used as the database for storing and managing information required by the system.
-              </p>
-            `,
-          },
-        ],
-      },
-
-      {
-        id: "implementation",
-        label: "Implementation",
-        kind: "desc",
-        body: `
-          <p>
-            The implementation connects the web interface with server-side processing and database storage, allowing information to be managed through the system rather than being presented only as static web content.
-          </p>
-        `,
-      },
-
-      {
-        id: "interface",
-        label: "Interface",
-        kind: "desc",
-        body: `
-          <p>
-            The project includes web interface screens for presenting and interacting with the information managed by the Stunting Information System.
-          </p>
-        `,
-        media: {
-          layout: "grid",
-          columns: 1,
-          items: [
-            "images/projects/sis/home.png",
-            "images/projects/sis/dashboard.png",
-            "images/projects/sis/data.png",
-          ],
-        },
       },
     ],
   },
